@@ -1,0 +1,30 @@
+#navBar{
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(31, 31, 68);
+}
+.navButton{
+    float: left;
+    background-color: rgb(31, 31, 68);
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#search{
+    margin-top: 12px;
+    margin-right: 20px;
+    width: 300px;
+    overflow: hidden;
+    float: left;
+    margin-top: 0.5;
+}
+.toRight{
+    float:right;
+}
