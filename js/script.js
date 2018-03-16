@@ -13,6 +13,10 @@ $("#logButton").click(function(){
     $("#login").fadeIn();
     $("#toHide").css('opacity','0.5');
 });
+$("#regButton").click(function(){
+    $("#login").fadeIn();
+    $("#toHide").css('opacity','0.5');
+});
 
 $("#close").click(function(){
     $('#login').css('display','none');
