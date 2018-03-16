@@ -12,9 +12,12 @@ function register(){
     console.log("Register");
 }
 function logIn(){
-    document.getElementById('login').style.display='block';
-    document.getElementById("toHide").style.opacity="0.5";
+    $("#login").fadeIn();
+
+    //document.getElementById('login').style.display='block';
+    $("#toHide").css('opacity','0.5');
 }
+
 document.getElementById("close").onclick=function(){
     document.getElementById('login').style.display='none';
     document.getElementById("toHide").style.opacity="1";
