@@ -1,17 +1,21 @@
-function mouseOver(id){
-    id.style.backgroundColor='#acb3bf';
-    id.style.cursor = 'pointer';
-    id.style.color='black';
-    
-}
-function mouseOff(id){
-    id.style.color='white';
-    id.style.backgroundColor = '#1f1f44';
-    
-}
+$(document).ready(function(){
+    $(".navButton").hover(function(){
+        $(this).css("background-color", "#acb3bf");
+        $(this).css("color", "black");
+        $(this).css("cursor", "pointer")},
+        function(){
+            $(this).css("background-color", "#1f1f44");
+            $(this).css("color", "white");
+    });
+});
 function register(){
     console.log("Register");
 }
 function logIn(){
-    console.log("log in");
+    document.getElementById('login').style.display='block';
+    document.getElementById("toHide").style.opacity="0.5";
+}
+document.getElementById("close").onclick=function(){
+    document.getElementById('login').style.display='none';
+    document.getElementById("toHide").style.opacity="1";
 }
