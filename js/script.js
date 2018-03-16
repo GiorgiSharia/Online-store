@@ -8,17 +8,13 @@ $(document).ready(function(){
             $(this).css("color", "white");
     });
 });
-function register(){
-    console.log("Register");
-}
-function logIn(){
+
+$("#logButton").click(function(){
     $("#login").fadeIn();
-
-    //document.getElementById('login').style.display='block';
     $("#toHide").css('opacity','0.5');
-}
+});
 
-document.getElementById("close").onclick=function(){
-    document.getElementById('login').style.display='none';
-    document.getElementById("toHide").style.opacity="1";
-}
+$("#close").click(function(){
+    $('#login').css('display','none');
+    $("#toHide").css('opacity','1');
+});
