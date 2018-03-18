@@ -24,47 +24,66 @@
                     <li class="navButton"><a>Products</a></li>
                     <li class="navButton"><a>About</a></li>
                     <li class="navButton"><a>Contact</a></li>
-                    <div class="col-lg-6" id="searchBox">
-                        <div class="input-group">
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Departments 
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                        <li><a href="#">HTML</a></li>
-                                        <li><a href="#">CSS</a></li>
-                                        <li><a href="#">JavaScript</a></li>
-                                </ul>
+                    <li>
+                        <div class="col-lg-6"  id="searchBox">
+                            <div class="input-group" >
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                                        <span id="title">Departments</span> 
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" id="drop">
+                                        <li><a href="#">Computers</a></li>
+                                        <li><a href="#">Cameras</a></li>
+                                        <li><a href="#">Tablets</a></li>
+                                        <li><a href="#">Phones</a></li>
+                                    </ul>                               
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn" type="button"><i class="glyphicon glyphicon-search"></i> Search</button>
+                                </span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                                <button class="btn" type="button"><i class="glyphicon glyphicon-search"></i> Search</button>
-                            </span>
                         </div>
-                    </div>
+                    </li>
                     <li class="navButton toRight" id="logButton"><a>Log in</a></li>
                     <li class="navButton toRight" id="regButton"><a>Register</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div id="login" class="login-initial">
-        <div id="inner-login">
-            <form class="login-content">
-                <button type="button" class="close" aria-label="Close" id="close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <label>Username</label>
-                <input id="uName"type="text" placeholder="Username" class="form-control" required>
-                <br/>
-                <label>Password</label>
-                <input id="pass"type="password" placeholder="Password" class="form-control" required> 
-                <br/><br/>
-                <button id="log" type="submit" class="btn btn-primary">Login</button>
-                <br/>
-                <p><a>Forgot Password ?</a></p>
-            </form>
-        </div>
+    <div id="login" class="box-initial">
+        <form class="box-content">
+            <button type="button" class="close"id="closeLog">
+                <span>&times;</span>
+            </button>
+            <label>Username</label>
+            <input id="logMail" placeholder="E-mail" class="form-control"  type="email" required>
+            <br/>
+            <label>Password</label>
+            <input id="logPass"type="password" placeholder="Password" class="form-control" required> 
+            <br/><br/>
+            <button id="log" type="submit" class="btn btn-success">Login</button>
+            <br/>
+            <p><a>Forgot Password ?</a></p>
+        </form>
+    </div>
+    <div id="register" class="box-initial">
+        <form class="box-content">
+            <button type="button" class="close" id="closeReg">
+                <span>&times;</span>
+            </button>
+            <label>Full Name</label>
+            <input id="regName"type="text" placeholder="Full Name" class="form-control" required>
+            <br/>
+            <label>Username</label>
+            <input id="regMail" placeholder="E-mail" class="form-control" type="email" required>
+            <br/>
+            <label>Password</label>
+            <input id="regPass"type="password" placeholder="Password" class="form-control" required> 
+            <br/><br/>
+            <button id="reg" type="submit" class="btn btn-success">Register</button>
+        </form>
     </div>
     <div>
         <img src="images/first.jpg">
