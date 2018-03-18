@@ -22,3 +22,4 @@ $("#close").click(function(){
     $('#login').css('display','none');
     $("#toHide").css('opacity','1');
 });
+
