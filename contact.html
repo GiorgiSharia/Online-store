@@ -7,12 +7,15 @@
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- fa fa symobls -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/css1.css">
+  <link rel="stylesheet" href="css/contact_style.css">
 </head>
 
 <body>
@@ -33,10 +36,10 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" id="drop">
-                                        <li><a href="#">Electronics</a></li>
-                                        <li><a href="#">Clothing</a></li>
-                                        <li><a href="#">House</a></li>
-                                        <li><a href="#">Footwear</a></li>
+                                        <li><a href="#">Computers</a></li>
+                                        <li><a href="#">Cameras</a></li>
+                                        <li><a href="#">Tablets</a></li>
+                                        <li><a href="#">Phones</a></li>
                                     </ul>                               
                                 </div>
                                 <input type="text" class="form-control" placeholder="Search for...">
@@ -51,41 +54,6 @@
                 </ul>
             </div>
         </nav>
-    </div>
-  <img src="https://static.pexels.com/photos/212372/pexels-photo-212372.jpeg" alt="Camera In Nature" id="try-pic">
-    <div id="sideMenu">
-        <ul class="nav nav-stacked">
-            <li class="sidebar"><a id="electronics">Electronics</a>
-                <ul id="electronics_sub" class="sub">
-                    <li><a>Cameras</a></li>
-                    <li><a>Computers</a></li>
-                    <li><a>Tablets</a></li>
-                    <li><a>Phones</a></li>
-                </ul>
-            </li>
-            <li class="sidebar"><a id="clothing">Clothing</a>
-                <ul id="clothing_sub" class="sub">
-                    <li class="subElement"><a>Women</a></li>
-                    <li><a>Men</a></li>
-                    <li><a>Kids</a></li>
-                </ul>
-            </li>
-            <li class="sidebar"><a id="house">House</a>
-                <ul id="house_sub" class="sub">
-                    <li><a>Garden</a></li>
-                    <li><a>Kitchen</a></li>
-                    <li><a>Bathroom</a></li>
-                    <li><a>Pool</a></li>
-                </ul>
-            </li>
-            <li class="sidebar"><a id="shoes">Footwear</a>
-                <ul id="shoes_sub" class="sub">
-                    <li><a>Women</a></li>
-                    <li><a>Men</a></li>
-                    <li><a>Children</a></li>
-                </ul>
-            </li
-        </ul>
     </div>
     <div id="login" class="box-initial">
         <form class="box-content">
@@ -120,20 +88,26 @@
             <button id="reg" type="submit" class="btn btn-success">Register</button>
         </form>
     </div>
-    <footer>
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-4">
-                <h2>Contact Details</h2>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-4">
-                <h2>About Us</h2>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-        </div>
-    </footer>    
+
+<div class="col-md-4" >
+
+        <h3 class="fa fa-info-circle" style="font-size:48px">Contact Info: </h3>
+    <div class="details">
+        <h4> Contact Details:</h4>
+
+        <ul>
+           <li style="list-style:none">  <i class="material-icons">domain</i> Akadeemia tee 11,
+                Tallinn, Estonia</li> 
+            <li class="fa fa-envelope-o" style="font-size:20px"> info@team3.com</li>
+            <br/>
+            <li class="fa fa-mobile" style="font-size:20px">  + 372 599 22 22 22</li> 
+            
+        </ul>
+    </div>
+
+</div>
+       
+
 </body>
 <script src="js/script.js"></script>
 </html>

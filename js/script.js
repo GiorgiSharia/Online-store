@@ -54,4 +54,3 @@ $(document).ready(function(){
         $("#house_sub").css("display", "none");
     });
 });
-
