@@ -29,6 +29,6 @@ $(document).ready(function(){
     $('#drop li').on('click', function() {
         $('#title').html($(this).find('a').html());
     });
+    
 
 });
-
