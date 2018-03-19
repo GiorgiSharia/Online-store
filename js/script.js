@@ -29,6 +29,29 @@ $(document).ready(function(){
     $('#drop li').on('click', function() {
         $('#title').html($(this).find('a').html());
     });
-
+    $("#electronics").click(function(){
+        $("#electronics_sub").css("display", "block");
+        $("#house_sub").css("display", "none");
+        $("#clothing_sub").css("display", "none");
+        $("#shoes_sub").css("display", "none");
+    });
+    $("#clothing").click(function(){
+        $("#clothing_sub").css("display", "block");
+        $("#electronics_sub").css("display", "none");
+        $("#house_sub").css("display", "none");
+        $("#shoes_sub").css("display", "none");
+    });
+    $("#house").click(function(){
+        $("#house_sub").css("display", "block");
+        $("#clothing_sub").css("display", "none");
+        $("#electronics_sub").css("display", "none");
+        $("#shoes_sub").css("display", "none");
+    });
+    $("#shoes").click(function(){
+        $("#shoes_sub").css("display", "block");
+        $("#clothing_sub").css("display", "none");
+        $("#electronics_sub").css("display", "none");
+        $("#house_sub").css("display", "none");
+    });
 });
 
