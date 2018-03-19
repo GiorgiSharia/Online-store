@@ -10,25 +10,35 @@ $(document).ready(function(){
 
     $("#logButton").click(function(){
         $("#login").fadeIn();
-        $("#toHide").css('opacity','0.5');
+        $("#login").siblings().css("opacity", "0.5");
     });
 
     $("#regButton").click(function(){
         $("#register").fadeIn();
-        $("#toHide").css('opacity','0.5');
+        $("#register").siblings().css("opacity", "0.5");
     });
 
     $("#closeLog").click(function(){
         $('#login').css('display','none');
-        $("#toHide").css('opacity','1');
+        $("#login").siblings().css("opacity", "1");
     });
     $("#closeReg").click(function(){
         $('#register').css('display','none');
-        $("#toHide").css('opacity','1');
+        $("#register").siblings().css("opacity", "1");
     });
     $('#drop li').on('click', function() {
         $('#title').html($(this).find('a').html());
     });
-
+    $("#electronics").click(function(){
+        $("#electronics_sub").toggle();
+    });
+    $("#clothing").click(function(){
+        $("#clothing_sub").toggle();
+    });
+    $("#house").click(function(){
+        $("#house_sub").toggle();
+    });
+    $("#shoes").click(function(){
+        $("#shoes_sub").toggle();
+    });
 });
-
