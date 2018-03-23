@@ -96,9 +96,9 @@ footer{
     color: black;
     margin-top: 20px;
 }
-#try-pic{
+.slideshow{
+    display:none;
     margin-bottom: 10px;
-    width: 100%;
 }
 #contact_title{
     padding-left: 38px;

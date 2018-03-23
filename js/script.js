@@ -1,4 +1,21 @@
 $(document).ready(function(){
+    var pool = $(".slideshow");
+    var index = 0;
+    slideshow();
+    //responsible for picture slideshow
+   function slideshow(){
+        if(index > pool.length -1){
+            index = 0;
+        }
+        $(pool[index]).css("display","block");
+        if(index == 0){
+            $(pool[pool.length - 1]).css("display","none");
+        }else{
+            $(pool[index - 1]).css("display","none");
+        }
+        index++;
+        $(setTimeout(slideshow,2000));
+    }
     $(".navButton").hover(function(){
         $(this).css("background-color", "#acb3bf");
         $(this).css("color", "black");
@@ -41,6 +58,8 @@ $(document).ready(function(){
     $("#shoes").click(function(){
         $("#shoes_sub").toggle();
     });
+    
+
 });
 //when clicked outside login and register boxes they fade out
 $('body').mouseup(function(e){
