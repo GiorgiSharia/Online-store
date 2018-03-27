@@ -60,20 +60,21 @@ $(document).ready(function(){
     $("#shoes").click(function(){
         $("#shoes_sub").toggle();
     });
-    
 
 });
 //when clicked outside login and register boxes they fade out
 $('body').mouseup(function(e){
-    var subject = $("#register");
-    if(e.target.id == subject.attr('id') || $(e.target).attr('class') != "navBar"){
-        subject.fadeOut();
-        subject.siblings().css("opacity", "1");
+    var subjectReg = $("#register");
+    if((!$(e.target).attr('class') || $(e.target).attr('id')) && ($(e.target).attr('class')!='form-control')){
+        subjectReg.fadeOut();
+        subjectReg.siblings().css("opacity", "1");
+        console.log($(e.target).attr('class'));
+    } 
+    subjectLog = $("#login");  
+    if((!$(e.target).attr('class') || $(e.target).attr('id'))&& ($(e.target).attr('class')!='form-control')){
+        subjectLog.fadeOut();
+        subjectLog.siblings().css("opacity", "1");
+        
+    } 
 
-    }     
-    subject = $("#login");
-    if(e.target.id == subject.attr('id') || $(e.target).attr('class') != "navBar"){
-        subject.fadeOut();
-        subject.siblings().css("opacity", "1");
-    }     
 });
