@@ -43,9 +43,11 @@ $(document).ready(function(){
         $('#register').css('display','none');
         $("#register").siblings().css("opacity", "1");
     });
+    //When you choose sth in dropdown, name changes to chosen name
     $('#drop li').on('click', function() {
         $('#title').html($(this).find('a').html());
     });
+    //double click closes the sub-list
     $("#electronics").click(function(){
         $("#electronics_sub").toggle();
     });
@@ -64,12 +66,13 @@ $(document).ready(function(){
 //when clicked outside login and register boxes they fade out
 $('body').mouseup(function(e){
     var subject = $("#register");
-    if(e.target.id == subject.attr('id')){
+    if(e.target.id == subject.attr('id') || $(e.target).attr('class') != "navBar"){
         subject.fadeOut();
         subject.siblings().css("opacity", "1");
+
     }     
     subject = $("#login");
-    if(e.target.id == subject.attr('id')){
+    if(e.target.id == subject.attr('id') || $(e.target).attr('class') != "navBar"){
         subject.fadeOut();
         subject.siblings().css("opacity", "1");
     }     
