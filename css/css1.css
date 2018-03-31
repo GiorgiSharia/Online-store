@@ -45,7 +45,9 @@ a{
     width: 30%;
     position:relative;
 }
-
+.well-align{
+    margin-top: 6px;
+}
 li a{
     display: block;
     color: white;
@@ -53,21 +55,10 @@ li a{
     text-decoration: none;
 }
 #searchBox{
-    margin-top:6px;
+    margin-top: 6px;
 }
 .btn{
     background-color: '#acb3bf' !important;
-}
-#search{
-    margin-top: 12px;
-    margin-right: 20px;
-    margin-bottom:12px;
-    width: 500px;
-    height: 20px;
-    overflow: hidden;
-    float: left;
-    margin-top: 0.5;
-    border-radius: 5px;
 }
 .toRight{
     float:right;

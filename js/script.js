@@ -71,10 +71,9 @@ $('body').mouseup(function(e){
         console.log($(e.target).attr('class'));
     } 
     subjectLog = $("#login");  
-    if((!$(e.target).attr('class') || $(e.target).attr('id'))&& ($(e.target).attr('class')!='form-control')){
+    if((!$(e.target).attr('class') || $(e.target).attr('id')) && ($(e.target).attr('class')!='form-control')){
         subjectLog.fadeOut();
         subjectLog.siblings().css("opacity", "1");
         
     } 
-
 });
