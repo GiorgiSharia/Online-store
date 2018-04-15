@@ -58,12 +58,46 @@
     <h2 class="header">Log In or Register for a everything.com Account</h2>
     <hr>
     <div class="row">
-        <div class="col-lg-6 header">
-            <h2>I'm a Returning Customer</h2>
+        <div class="col-lg-6 header" id="login">
+            <h2 id="headerForLogin">I'm a Returning Customer</h2>
+            <form class="col-lg-5">
+                <label for="logMail">Email Address:</label>
+                <input id="logMail" placeholder="E-mail" class="form-control"  type="email" required>
+                <br/>
+                <label for="logPass">Password:</label>
+                <input id="logPass"type="password" placeholder="Password" class="form-control" required> 
+                <br/>
+                <button id="log"class="buttn"><b>LOG IN</b></button>
+                <br/>
+                <p><a>Forgot Password ?</a></p>
+            </form>
         </div>
         <div class="divider"></div>
-        <div class="col-lg-6 header">
-            <h2>I'm a New Customer</h2>
+        <div class="col-lg-4 header" id="register">
+            <h2 id="headerForReg">I'm a New Customer</h2>
+            <form class="col-lg-6">
+                    <label for="fullName">Full Name:</label>
+                    <input id="fullName" placeholder="Full Name" class="form-control"  type="text" required>
+                    <br/>
+                    <label for="regMail">Email Address:</label>
+                    <input id="regMail" placeholder="E-mail" class="form-control"  type="email" required>
+                    <br/>
+                    <label for="regPass">Password:</label>
+                    <input id="regPass"type="password" placeholder="Password" class="form-control" required> 
+                    <br/>
+                    <label for="regPassRepeat">Repeat Password:</label>
+                    <input id="regPassRepeat"type="password" placeholder="Repeat Password" class="form-control" required> 
+                    <br/>
+                    <button id="reg"class="buttn"><b>REGISTER</b></button>
+                    <br/>
+            </form>
+        </div>
+        <div class="col-lg-2" id="ad">
+            <label for="ad" id="adLabel">SHOP NOW:</label>
+            <br/>
+            <a href=""><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
+            <a href=""><img src="images/item-2.jpg" class="ad" alt:"Green-Polariod"></a>
+            <a href=""><img src="images/item-3.jpg" class="ad" alt:"Green-Polariod"></a>
         </div>
     </div>
 </body>
