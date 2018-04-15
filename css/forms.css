@@ -1,0 +1,43 @@
+.header{
+    color: rgb(31, 31, 68);
+    font-family:Verlag, Geneva, sans-serif;
+    padding-left: 50px;
+}
+.divider{
+    position:absolute;
+    left:40%;
+    top:21%;
+    bottom:10%;
+    border-left:1px solid rgb(31, 31, 68);
+}
+hr{
+    height: 1px;
+    background-color: rgb(31, 31, 68);
+}
+.forms{
+    width: 45%;
+    margin-top: 1px !important; 
+}
+.buttn{
+    background-color: rgb(31, 31, 68);
+    color: white;
+    height: 40px;
+    padding: 5px;
+}
+#headerForLogin{
+    padding-left:15px;
+}
+#headerForReg{
+    padding-left: 15px;
+}
+.ad{
+    float: right;
+    width:172px;
+    height:129px
+}
+#adLabel{
+    float: right;
+    padding-left: 65px;
+    padding-top: 0%;
+    font-size: 20px;
+}
