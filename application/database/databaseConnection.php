@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Class DatabaseConnection
+ *
+ * This class establish connection to the MySQL database
+ */
 class DatabaseConnection
 {
     public function getConnection()
@@ -6,9 +12,9 @@ class DatabaseConnection
       // check you environment setup and update the info below, if needed.
       $host = 'localhost';
       $port = '3306';
-      $user = 'group_3_user';
-      $password = 'EhdP7eoqrWXh5T3c';
-      $database = 'group_3_user_';
+      $user = 'root';
+      $password = 'root';
+      $database = 'icd0007_app_db';
 
       // optional
       $opt = [

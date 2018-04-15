@@ -3,16 +3,13 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- fa fa symobls -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/css1.css">
@@ -50,7 +47,7 @@
                         </div>
                     </li>
                     <li class="navButton toRight"><a href="contact.html">Contact</a></li>
-                    <li class="navButton toRight" id="user"><a href=""><i class="fa fa-user"></i> Log in | Register</a></li>
+                    <li class="navButton toRight" id="user"><a href="userForm.html"><i class="fa fa-user"></i> Log in | Register</a></li>
                 </ul>
             </div>
         </nav>
@@ -75,7 +72,7 @@
         <div class="divider"></div>
         <div class="col-lg-4 header" id="register">
             <h2 id="headerForReg">I'm a New Customer</h2>
-            <form class="col-lg-6" method="POST">
+            <form class="col-lg-6" method="POST" id="regForm">
                 <label for="firstname">Firstname:</label>
                 <input id="firstname" placeholder="Full Name" class="form-control"  type="text" name="data[firstname]"required>
                 <br/>
@@ -106,7 +103,7 @@
                 <label for="regPassRepeat">Repeat Password:</label>
                 <input id="regPassRepeat"type="password" placeholder="Repeat Password" class="form-control" required> 
                 <br/>
-                <button id="reg" class="buttn" name="data[submit]"><b>REGISTER</b></button>
+                <input id="reg" class="buttn" type="submit" value="Submit" name="data[submit]">
                 <br/>
             </form>
         </div>
@@ -114,8 +111,10 @@
             <label for="ad" id="adLabel">SHOP NOW:</label>
             <br/>
             <a href=""><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
-            <a href=""><img src="images/item-2.jpg" class="ad" alt:"Green-Polariod"></a>
-            <a href=""><img src="images/item-3.jpg" class="ad" alt:"Green-Polariod"></a>
+            <a href=""><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
+            <a href=""><img src="images/item-3.jpg" class="ad" alt:"GoPro"></a>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
