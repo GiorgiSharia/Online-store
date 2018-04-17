@@ -71,12 +71,13 @@
                 <label for="logPass">Password:</label>
                 <input id="logPass" type="password" placeholder="Password" class="form-control" name="data[password]" required> 
                 <br/>
-                <input id="log" class="buttn" type="submit" value="Submit" name="data[submit]">
+                <input id="log" class="buttn" type="submit" value="LOG IN" name="data[submit]">
                 <br/>
                 <p><a>Forgot Password ?</a></p>
             </form>
         </div>  
-        <div class="col-lg-6 header" id="register"> 
+        <div style="position:absolute; left:35%; top:20%; height: 550px; border-left:1px solid rgb(31, 31, 68);"></div>
+        <div class="col-lg-6 header" id="register" > 
             <h2 id="headerForReg">I'm a New Customer</h2>
             <form method="POST" id="regForm" class="row">
                 <div class="col-lg-6">
@@ -113,7 +114,7 @@
                     <input id="regPassRepeat"type="password" placeholder="Repeat Password" class="form-control" required> 
                     <br/>
                 </div>
-                <input id="reg" class="buttn" type="submit" value="Submit" name="data[submit]">
+                <input id="reg" class="buttn" type="submit" value="REGISTER" name="data[submit]">
                 <br/>
             </form>
         </div>
@@ -122,7 +123,8 @@
             <br/>
             <a href=""><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
             <a href=""><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
-            <a href=""><img src="images/item-3.jpg" class="ad" alt:"GoPro"></a>
+            <a href=""><img src="images/item-3.jpg" class="ad" alt:"GoPro-on-legs"></a>
+            <a href=""><img src="images/item-4.jpg" class="ad" alt:"GoPro"></a>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
