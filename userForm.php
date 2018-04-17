@@ -1,6 +1,7 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -56,54 +57,62 @@
     <h2 class="header">Log In or Register for a everything.com Account</h2>
     <hr>
     <div class="row">
-        <div class="col-lg-6 header" id="login">
+        <div class="col-lg-4 header" id="login">
             <h2 id="headerForLogin">I'm a Returning Customer</h2>
-            <form class="col-lg-5">
+            <?php
+                if (isset($_SESSION['error_message'])) {
+                    echo $_SESSION['error_message'];
+                }
+            ?>
+            <form action="/Online-store/application/loginHandler.php" method="POST">
                 <label for="logMail">Email Address:</label>
-                <input id="logMail" placeholder="E-mail" class="form-control"  type="email" required>
+                <input id="logMail" placeholder="E-mail" class="form-control" type="email" name="data[email]" required>
                 <br/>
                 <label for="logPass">Password:</label>
-                <input id="logPass" type="password" placeholder="Password" class="form-control" required> 
+                <input id="logPass" type="password" placeholder="Password" class="form-control" name="data[password]" required> 
                 <br/>
-                <button id="log" class="buttn"><b>LOG IN</b></button>
+                <input id="log" class="buttn" type="submit" value="Submit" name="data[submit]">
                 <br/>
                 <p><a>Forgot Password ?</a></p>
             </form>
-        </div>
-        <div class="divider"></div>
-        <div class="col-lg-4 header" id="register">
+        </div>  
+        <div class="col-lg-6 header" id="register"> 
             <h2 id="headerForReg">I'm a New Customer</h2>
-            <form class="col-lg-6" method="POST" id="regForm">
-                <label for="firstname">Firstname:</label>
-                <input id="firstname" placeholder="Full Name" class="form-control"  type="text" name="data[firstname]"required>
-                <br/>
-                <label for="lastname">Lastname:</label>
-                <input id="lastname" placeholder="Full Name" class="form-control"  type="text" name="data[lastname]" required>
-                <br/>                   
-                <label for="regMail">Email Address:</label>
-                <input id="regMail" placeholder="E-mail" class="form-control"  type="email"  name="data[email]" required>
-                <br/>
-                <label for="address">Address:</label>
-                <input id="address" placeholder="Address" class="form-control"  type="text"  name="data[address]" required>
-                <br/>
-                <label for="city">City:</label>
-                <input id="city" placeholder="City" class="form-control"  type="text" name="data[city]" required>
-                <br/>
-                <label for="country">Country:</label>
-                <input id="country" placeholder="Country" class="form-control"  type="text" name="data[country]" required>
-                <br/>
-                <label for="postal">Postal Code:</label>
-                <input id="postal" placeholder="Postal Code" class="form-control"  type="text" name="data[postcode]" required>
-                <br/>
-                <label for="phone">Phone Number:</label>
-                <input id="phone" placeholder="Phone Number" class="form-control"  type="text" name="data[telephone]" required>
-                <br/>
-                <label for="regPass">Password:</label>
-                <input id="regPass"type="password" placeholder="Password" class="form-control" name="data[password]" required> 
-                <br/>
-                <label for="regPassRepeat">Repeat Password:</label>
-                <input id="regPassRepeat"type="password" placeholder="Repeat Password" class="form-control" required> 
-                <br/>
+            <form method="POST" id="regForm" class="row">
+                <div class="col-lg-6">
+                    <label for="firstname">Firstname:</label>
+                    <input id="firstname" placeholder="Full Name" class="form-control"  type="text" name="data[firstname]"required>
+                    <br/>
+                    <label for="lastname">Lastname:</label>
+                    <input id="lastname" placeholder="Full Name" class="form-control"  type="text" name="data[lastname]" required>
+                    <br/>                   
+                    <label for="regMail">Email Address:</label>
+                    <input id="regMail" placeholder="E-mail" class="form-control"  type="email"  name="data[email]" required>
+                    <br/>
+                    <label for="address">Address:</label>
+                    <input id="address" placeholder="Address" class="form-control"  type="text"  name="data[address]" required>
+                    <br/>
+                    <label for="city">City:</label>
+                    <input id="city" placeholder="City" class="form-control"  type="text" name="data[city]" required>
+                    <br/>
+                </div>
+                <div class="col-lg-6">
+                    <label for="country">Country:</label>
+                    <input id="country" placeholder="Country" class="form-control"  type="text" name="data[country]" required>
+                    <br/>
+                    <label for="postal">Postal Code:</label>
+                    <input id="postal" placeholder="Postal Code" class="form-control"  type="text" name="data[postcode]" required>
+                    <br/>
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" placeholder="Phone Number" class="form-control"  type="text" name="data[telephone]" required>
+                    <br/>
+                    <label for="regPass">Password:</label>
+                    <input id="regPass"type="password" placeholder="Password" class="form-control" name="data[password]" required> 
+                    <br/>
+                    <label for="regPassRepeat">Repeat Password:</label>
+                    <input id="regPassRepeat"type="password" placeholder="Repeat Password" class="form-control" required> 
+                    <br/>
+                </div>
                 <input id="reg" class="buttn" type="submit" value="Submit" name="data[submit]">
                 <br/>
             </form>

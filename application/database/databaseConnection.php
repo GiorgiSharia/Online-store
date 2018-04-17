@@ -10,11 +10,11 @@ class DatabaseConnection
     public function getConnection()
     {
       // check you environment setup and update the info below, if needed.
-      $host = 'localhost';
+      $host = 'ec2-18-197-115-58.eu-central-1.compute.amazonaws.com';
       $port = '3306';
-      $user = 'root';
-      $password = 'root';
-      $database = 'icd0007_app_db';
+      $user = 'group_3_user';
+      $password = 'EhdP7eoqrWXh5T3c';
+      $database = 'group_3_user_';
 
       // optional
       $opt = [

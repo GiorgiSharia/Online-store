@@ -1,3 +1,6 @@
+<?php
+      require_once ('protected_access_check.php');
+?>    
 
 <!DOCTYPE html>
 
@@ -51,17 +54,18 @@
                         </div>
                     </li>
                     <li class="navButton toRight"><a href="contact.html">Contact</a></li>
-                    <li class="navButton toRight" id="user"><a href="\Online-store\userForm.php"><i class="fa fa-user"></i> Log in | Register</a></li>
+                    <li class="navButton toRight" id="user"><a href="/Online-store/logout.php"><i class="fa fa-user"></i> Sign Out</a></li>
+                    <li class="navButton toRight"><a href="">My Profile</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-
     <div>
         <img src="images/1.jpg" alt="Image Not Found" class="slideshow"> 
         <img src="images/2.jpg" alt="Image Not Found" class="slideshow">
         <img src="images/3.jpg" alt="Image Not Found" class="slideshow">
     </div>
+
     <div id="sideMenu">
         <ul class="nav nav-stacked">
             <li class="sidebar"><a id="electronics">Electronics</a>
