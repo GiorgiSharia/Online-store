@@ -24,25 +24,6 @@ $(document).ready(function(){
             $(this).css("background-color", "#1f1f44");
             $(this).css("color", "white");
     });
-//login box pops and background blurs
-    $("#logButton").click(function(){
-        $("#login").fadeIn();
-        $("#login").siblings().css("opacity", "0.5");
-    });
-//register box pops and background blurs
-    $("#regButton").click(function(){
-        $("#register").fadeIn();
-        $("#register").siblings().css("opacity", "0.5");
-    });
-
-    $("#closeLog").click(function(){
-        $('#login').css('display','none');
-        $("#login").siblings().css("opacity", "1");
-    });
-    $("#closeReg").click(function(){
-        $('#register').css('display','none');
-        $("#register").siblings().css("opacity", "1");
-    });
     //When you choose sth in dropdown, name changes to chosen name
     $('#drop li').on('click', function() {
         $('#title').html($(this).find('a').html());
@@ -60,20 +41,4 @@ $(document).ready(function(){
     $("#shoes").click(function(){
         $("#shoes_sub").toggle();
     });
-
-});
-//when clicked outside login and register boxes they fade out
-$('body').mouseup(function(e){
-    var subjectReg = $("#register");
-    if((!$(e.target).attr('class') || $(e.target).attr('id')) && ($(e.target).attr('class')!='form-control')){
-        subjectReg.fadeOut();
-        subjectReg.siblings().css("opacity", "1");
-        console.log($(e.target).attr('class'));
-    } 
-    subjectLog = $("#login");  
-    if((!$(e.target).attr('class') || $(e.target).attr('id')) && ($(e.target).attr('class')!='form-control')){
-        subjectLog.fadeOut();
-        subjectLog.siblings().css("opacity", "1");
-        
-    } 
 });

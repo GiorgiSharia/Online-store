@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- fa fa symobls -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="css/css1.css">
   <link rel="stylesheet" href="css/forms.css">
   <title>eShop</title>
@@ -49,7 +49,7 @@
                         </div>
                     </li>
                     <li class="navButton toRight"><a href="contact.html">Contact</a></li>
-                    <li class="navButton toRight" id="user"><a href="userForm.html"><i class="fa fa-user"></i> Log in | Register</a></li>
+                    <li class="navButton toRight" id="user"><a href="userForm.php"><i class="fa fa-user"></i> Log in | Register</a></li>
                 </ul>
             </div>
         </nav>
@@ -76,7 +76,7 @@
                 <p><a>Forgot Password ?</a></p>
             </form>
         </div>  
-        <div style="position:absolute; left:35%; top:20%; height: 550px; border-left:1px solid rgb(31, 31, 68);"></div>
+        <div class="divider"></div>
         <div class="col-lg-6 header" id="register" > 
             <h2 id="headerForReg">I'm a New Customer</h2>
             <form method="POST" id="regForm" class="row">
@@ -119,14 +119,16 @@
             </form>
         </div>
         <div class="col-lg-2" id="ad">
-            <label id="adLabel">SHOP NOW:</label>
+            <div>SHOP NOW:</div>
             <br/>
-            <a href=""><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
+            <a href="productProfile.html" id="item-1"><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
             <a href=""><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
             <a href=""><img src="images/item-3.jpg" class="ad" alt:"GoPro-on-legs"></a>
             <a href=""><img src="images/item-4.jpg" class="ad" alt:"GoPro"></a>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
