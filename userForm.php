@@ -54,7 +54,7 @@
             </div>
         </nav>
     </div>
-    <h2 class="header">Log In or Register for a everything.com Account</h2>
+    <h2 class="header">Log In or Register</h2>
     <hr>
     <div class="row">
         <div class="col-lg-4 header" id="login">
@@ -73,7 +73,7 @@
                 <br/>
                 <input id="log" class="buttn" type="submit" value="LOG IN" name="data[submit]">
                 <br/>
-                <p><a>Forgot Password ?</a></p>
+                <p><a href="forgotPSW.php">Forgot Password ?</a></p>
             </form>
         </div>  
         <div class="divider"></div>
