@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -25,9 +27,9 @@
         <nav>
             <div>
                 <ul id="navBar">
-                    <li class="navButton"><a href="homepage.html">Home</a></li>
-                    <li class="navButton"><a href="product.html">Products</a></li>
-                    <li class="navButton"><a href="about.html">About</a></li>
+                    <li class="navButton"><a href="homepage.php">Home</a></li>
+                    <li class="navButton"><a href="product.php">Products</a></li>
+                    <li class="navButton"><a href="about.php">About</a></li>
                     <li>
                         <div class="col-lg-6"  id="search">
                             <div class="input-group well-align" >
@@ -50,8 +52,13 @@
                             </div>
                         </div>
                     </li>
-                    <li class="navButton toRight"><a href="contact.html">Contact</a></li>
-                    <li class="navButton toRight" id="user"><a href="userForm.php"><i class="fa fa-user"></i> Log in | Register</a></li>
+                    <li class="navButton toRight"><a href="contact.php">Contact</a></li>
+                    <?php if($_SESSION['isLoggedIn']){ ?>
+                        <li class="navButton toRight" id="user"><a href="/Online-store/logout.php"><i class="fa fa-user"></i> Sign Out</a></li>
+                        <li class="navButton toRight"><a href="">My Profile</a></li>
+                      <?php }else{ ?>
+                        <li class="navButton toRight" id="user"><a href="userForm.php"><i class="fa fa-user"></i> Log in | Register</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>

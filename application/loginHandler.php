@@ -39,7 +39,7 @@ function login() {
             $_SESSION['isLoggedIn'] = true;
             $_SESSION['userID'] = $userData['id'];
             $_SESSION['success_message'] = 'User successfully';
-            header('Location: /Online-store/profile.php');
+            header('Location: /Online-store/Homepage.php');
 
             return;
         }

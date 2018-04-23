@@ -4,4 +4,4 @@
     session_unset();
     session_destroy();
 
-    header('Location: /Online-store/Homepage.html');
+    header('Location: /Online-store/Homepage.php');
