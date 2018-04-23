@@ -96,6 +96,7 @@ if(isset($_POST['logMail'])) {
                     echo ($pass);
                     echo nl2br("\nHashed Password: ");
                     echo ($newpsw);
+                    echo nl2br("\n<a href='../userForm.php'>Return & Log in</a>");
                     return true;
                 } else {
                     echo "Error updating record";
