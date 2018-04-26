@@ -68,7 +68,7 @@ session_start();
             echo $_SESSION['error_message'];
         }
         ?>
-        <form action="/Online-store/application/change_user_password" method="POST">
+        <form action="/Online-store/application/change_user_password.php" method="POST">
             <label for="currPassword">Current Password:</label>
             <input id="currPassword" placeholder="Current Password" class="form-control" type="password" name="logMail" required>
             <br/>
