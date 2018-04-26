@@ -1,0 +1,16 @@
+.buttn{
+    background-color:rgb(31, 31, 68);
+    font-weight: bold;
+    width: 150px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+a{
+    color:white;
+}
+img{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    width: 300px;
+    height: 300px;
+}

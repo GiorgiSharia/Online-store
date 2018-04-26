@@ -51,7 +51,7 @@ session_start();
                 <li class="navButton toRight"><a href="contact.html">Contact</a></li>
                 <?php if($_SESSION['isLoggedIn']){ ?>
                         <li class="navButton toRight" id="user"><a href="/Online-store/logout.php"><i class="fa fa-user"></i> Sign Out</a></li>
-                        <li class="navButton toRight"><a href="changePSW.php">My Profile</a></li>
+                        <li class="navButton toRight"><a href="profile.php">My Profile</a></li>
                 <?php }else{ ?>
                         <li class="navButton toRight" id="user"><a href="userForm.php"><i class="fa fa-user"></i> Log in | Register</a></li>
                 <?php } ?>

@@ -1,5 +1,5 @@
 <?php
-      require_once ('protected_access_check.php');
+    session_start();
 ?>    
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/css1.css">
-<link rel="stylesheet" href="css/profile_style.css"
+<link rel="stylesheet" href="css/forms.css">
 <script src="js/script.js"></script>
 </head>
 
@@ -55,43 +55,52 @@
                     </li>
                     <li class="navButton toRight"><a href="contact.php">Contact</a></li>
                     <li class="navButton toRight" id="user"><a href="/Online-store/logout.php"><i class="fa fa-user"></i> Sign Out</a></li>
-                    <li class="navButton toRight"><a href="">My Profile</a></li>
+                    <li class="navButton toRight"><a href="profile.php">My Profile</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <img id="user_profile_image">
-            <button class="btn buttn"><a href="editProfile.php">Edit Profile</a></button>
-            <br/>
-            <button class="btn buttn"><a href="changePSW.php">Change Password</a></button>
-        </div>
-        <div class="col-lg-4">
-            <h2 id="user_name">User</h2>
-            <p>Address: </p>
-        </div>
+<div class="row">
+    <div class="col-lg-3">
+        <a href=""><img src="images/offer_1.jpg"></a>
     </div>
-    <footer id="footer">
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-4">
-                <h2 id="contact_title"> Contact Details:</h2>
-                <ul>
-                    <li style="list-style:none">  <i class="material-icons">domain</i> Akadeemia tee 11,
-                        Tallinn, Estonia</li> 
-                    <li class="fa fa-envelope-o" style="font-size:20px"> info@team3.com</li>
-                    
-                    <li class="fa fa-mobile" style="font-size:20px">  + 372 599 22 22 22</li>   
-                </ul>
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-4">
-                <h2>About Us</h2>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-        </div>
-    </footer>    
-</body>
-
-</html>
+    <div class="col-lg-6 header"> 
+            <h2 id="headerForReg">Edit your profile</h2>
+            <hr>
+            <form class="row">
+                <div class="col-lg-6">
+                    <label for="firstname">Firstname:</label>
+                    <input id="firstname" placeholder="Full Name" class="form-control"  type="text" name="data[firstname]"required>
+                    <br/>
+                    <label for="lastname">Lastname:</label>
+                    <input id="lastname" placeholder="Full Name" class="form-control"  type="text" name="data[lastname]" required>
+                    <br/>                   
+                    <label for="regMail">Email Address:</label>
+                    <input id="regMail" placeholder="E-mail" class="form-control"  type="email"  name="data[email]" required>
+                    <br/>
+                    <label for="address">Address:</label>
+                    <input id="address" placeholder="Address" class="form-control"  type="text"  name="data[address]" required>
+                    <br/>
+                </div>
+                <div class="col-lg-6">
+                    <label for="city">City:</label>
+                    <input id="city" placeholder="City" class="form-control"  type="text" name="data[city]" required>
+                    <br/>
+                    <label for="country">Country:</label>
+                    <input id="country" placeholder="Country" class="form-control"  type="text" name="data[country]" required>
+                    <br/>
+                    <label for="postal">Postal Code:</label>
+                    <input id="postal" placeholder="Postal Code" class="form-control"  type="text" name="data[postcode]" required>
+                    <br/>
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" placeholder="Phone Number" class="form-control"  type="text" name="data[telephone]" required>
+                    <br/>
+                </div>
+                <input id="reg" class="buttn" type="submit" value="REGISTER" name="data[submit]">
+                <br/>
+            </form>
+    </div>
+    <div class="col-lg-3">
+        <a href=""><img src="images/offer_2.jpg"></a>
+    </div>
+</div>

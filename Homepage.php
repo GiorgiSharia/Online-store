@@ -55,7 +55,7 @@
                     <li class="navButton toRight"><a href="contact.php">Contact</a></li>
                     <?php if($_SESSION['isLoggedIn']){ ?>
                         <li class="navButton toRight" id="user"><a href="/Online-store/logout.php"><i class="fa fa-user"></i> Sign Out</a></li>
-                        <li class="navButton toRight"><a href="changePSW.php">My Profile</a></li>
+                        <li class="navButton toRight"><a href="profile.php">My Profile</a></li>
                       <?php }else{ ?>
                         <li class="navButton toRight" id="user"><a href="userForm.php"><i class="fa fa-user"></i> Log in | Register</a></li>
                     <?php } ?>
@@ -65,7 +65,7 @@
     </div>
 
     <div>
-        <img src="images/1.jpg" alt="Image Not Found" class="slideshow"> 
+        <img src="images/offer.jpg" alt="Image Not Found" class="slideshow"> 
         <img src="images/2.jpg" alt="Image Not Found" class="slideshow">
         <img src="images/3.jpg" alt="Image Not Found" class="slideshow">
     </div>
