@@ -23,9 +23,9 @@
         <nav>
             <div>
                 <ul id="navBar">
-                    <li class="navButton"><a href="homepage.html">Home</a></li>
-                    <li class="navButton"><a href="product.html">Products</a></li>
-                    <li class="navButton"><a href="about.html">About</a></li>
+                    <li class="navButton"><a href="homepage.php">Home</a></li>
+                    <li class="navButton"><a href="product.php">Products</a></li>
+                    <li class="navButton"><a href="about.php">About</a></li>
                     <li>
                         <div class="col-lg-6"  id="search">
                             <div class="input-group well-align" >
