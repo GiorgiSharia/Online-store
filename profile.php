@@ -1,5 +1,8 @@
 <?php
       require_once ('protected_access_check.php');
+      session_start();
+      $id = $_SESSION['userID'];
+
 ?>    
 
 <!DOCTYPE html>
@@ -67,8 +70,10 @@
             <br/>
             <button class="btn buttn"><a href="changePSW.php">Change Password</a></button>
         </div>
+
         <div class="col-lg-4">
-            <h2 id="user_name">User</h2>
+            <h2 id="user_name">Hello, <?php echo($fname); ?></h2>
+            <p>ID: <?php echo($id); ?></p>
             <p>Address: </p>
         </div>
     </div>
