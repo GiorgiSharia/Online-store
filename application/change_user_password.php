@@ -4,12 +4,12 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 
-
+include 'validator.php';
 function changePSW()
 {
     //$password = $_POST['currPassword']; // required
-    $newPassword = $_POST['newPassword']; // required
-    $newPassword2 = $_POST['newPassword2']; // required
+    $newPassword = isset($_POST['newPassword']) ? $_POST['newPassword'] : null; // required
+    $newPassword2 = isset($_POST['newPassword2']) ? $_POST['newPassword'] : null; // required
     $newPasswordH = password_hash($newPassword, PASSWORD_DEFAULT);
 
     if($newPassword != $newPassword2){
@@ -53,6 +53,8 @@ function changePSW()
         if ($update_status === TRUE) {
             echo("Record updated successfully" . "\r\n");
             echo nl2br("\n<a href='../Homepage.php'>Return to homepage</a>");
+            $newPassword = trimSpecialChars($newPassword);
+            echo($newPassword);
             return true;
         } else {
             echo "Error updating record";
