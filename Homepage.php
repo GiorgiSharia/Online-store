@@ -66,8 +66,8 @@
 
     <div>
         <img src="images/offer.jpg" alt="Image Not Found" class="slideshow"> 
-        <img src="images/2.jpg" alt="Image Not Found" class="slideshow">
-        <img src="images/3.jpg" alt="Image Not Found" class="slideshow">
+        <img src="images/offer1.jpg" alt="Image Not Found" class="slideshow">
+        <img src="images/offer2.png" alt="Image Not Found" class="slideshow">
     </div>
     <div id="sideMenu">
         <ul class="nav nav-stacked">
