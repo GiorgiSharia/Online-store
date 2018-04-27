@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    require_once ('protected_access_check.php');
+    require_once ('application/models/User.php');
 ?>    
 
 <!DOCTYPE html>
@@ -67,36 +68,43 @@
     <div class="col-lg-6 header"> 
             <h2 id="headerForReg">Edit your profile</h2>
             <hr>
-            <form class="row">
+            <?php
+            if (isset($_SESSION['error_message'])) {
+                echo '<p>' . $_SESSION['error_message'] . '</p>';
+            } elseif (isset($_SESSION['success_message'])) {
+                echo '<p>' . $_SESSION['success_message'] . '</p>';
+            }
+            ?>
+            <form class="row" id="updateForm" action="application/updateHandler.php" method="POST">
                 <div class="col-lg-6">
                     <label for="firstname">Firstname:</label>
-                    <input id="firstname" placeholder="Full Name" class="form-control"  type="text" name="data[firstname]"required>
+                    <input id="firstname" placeholder="Full Name" class="form-control"  type="text" name="data[firstname]" value="<?= $userData['firstname']; ?>" required>
                     <br/>
                     <label for="lastname">Lastname:</label>
-                    <input id="lastname" placeholder="Full Name" class="form-control"  type="text" name="data[lastname]" required>
+                    <input id="lastname" placeholder="Full Name" class="form-control"  type="text" name="data[lastname]" value="<?= $userData['lastname']; ?>" required>
                     <br/>                   
                     <label for="regMail">Email Address:</label>
-                    <input id="regMail" placeholder="E-mail" class="form-control"  type="email"  name="data[email]" required>
+                    <input id="regMail" placeholder="E-mail" class="form-control"  type="email"  name="data[email]" value="<?= $userData['email']; ?>" required>
                     <br/>
                     <label for="address">Address:</label>
-                    <input id="address" placeholder="Address" class="form-control"  type="text"  name="data[address]" required>
+                    <input id="address" placeholder="Address" class="form-control"  type="text"  name="data[address]" value="<?= $userData['address']; ?>" required>
                     <br/>
                 </div>
                 <div class="col-lg-6">
                     <label for="city">City:</label>
-                    <input id="city" placeholder="City" class="form-control"  type="text" name="data[city]" required>
+                    <input id="city" placeholder="City" class="form-control"  type="text" name="data[city]" value="<?= $userData['city']; ?>" required>
                     <br/>
                     <label for="country">Country:</label>
-                    <input id="country" placeholder="Country" class="form-control"  type="text" name="data[country]" required>
+                    <input id="country" placeholder="Country" class="form-control"  type="text" name="data[country]" value="<?= $userData['country']; ?>" required>
                     <br/>
                     <label for="postal">Postal Code:</label>
-                    <input id="postal" placeholder="Postal Code" class="form-control"  type="text" name="data[postcode]" required>
+                    <input id="postal" placeholder="Postal Code" class="form-control"  type="text" name="data[postcode]" value="<?= $userData['postal_code']; ?>" required>
                     <br/>
                     <label for="phone">Phone Number:</label>
-                    <input id="phone" placeholder="Phone Number" class="form-control"  type="text" name="data[telephone]" required>
+                    <input id="phone" placeholder="Phone Number" class="form-control"  type="text" name="data[telephone]" value="<?= $userData['telephone']; ?>" required>
                     <br/>
                 </div>
-                <input id="reg" class="buttn" type="submit" value="REGISTER" name="data[submit]">
+                <input id="reg" class="buttn" type="submit" value="Submit Changes" name="data[submit]">
                 <br/>
             </form>
     </div>
@@ -104,114 +112,3 @@
         <a href=""><img src="images/offer_2.jpg"></a>
     </div>
 </div>
-
-//-----------------
-    <?php
-    require_once ('protected_access_check.php');
-    require_once ('application/models/User.php');
-    ?>
-    <!DOCTYPE HTML>
-    <html>
-    <head>
-        <title>::Profile::</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <link rel="stylesheet" href="/mywebapp/css/main.css" type="text/css">
-        <link rel="shortcut icon" href="/mywebapp/images/favicon.ico?v=2" type="image/x-icon"/>
-    </head>
-    <body>
-    <div id="wrapper">
-        <div id="maincontent">
-
-            <div id="header">
-                <div id="logo" class="left">
-                    <a href="/mywebapp">ICD0007</a>
-                </div>
-                <div class="right marT10">
-                    <b>
-                        <a href="/mywebapp/logout.php">Logout</a>
-                    </b>
-                </div>
-                <br><br>
-                <ul class="topmenu">
-                    <li><a href="/mywebapp">Home</a></li>
-                    <li><a href="/mywebapp">Student Lists</a></li>
-                    <li><a href="/mywebapp">Contact Us</a></li>
-                </ul>
-                <br>
-                <div class="banner"><p></p></div>
-                <br class="clear"/>
-            </div>
-
-            <div class="content">
-                <br/>
-                <div class="content-area">
-                    <h2>Update profile</h2>
-                    <br/>
-                    <?php
-                    if (isset($_SESSION['error_message'])) {
-                        echo '<p>' . $_SESSION['error_message'] . '</p>';
-                    } elseif (isset($_SESSION['success_message'])) {
-                        echo '<p>' . $_SESSION['success_message'] . '</p>';
-                    }
-                    ?>
-                    <form id="updateForm" action="application/updateHandler.php" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="data[id]" value="<?= $userData['id']; ?>"/>
-                        <p>
-                            <label>Profile Picture: </label>
-                            <input type="file" name="fileToUpload" id="fileToUpload">
-                        <p>
-                        <p>
-                            <label>Email: </label>
-                            <input type="text" name="data[email]" value="<?= $userData['email']; ?>"/>
-                        <p>
-                        <p>
-                            <label>First Name: </label>
-                            <input type="text" name="data[firstname]" value="<?= $userData['firstname']; ?>"/>
-                        <p>
-                        <p>
-                            <label>Last Name: </label>
-                            <input type="text" name="data[lastname]" value="<?= $userData['lastname']; ?>"/>
-                        <p>
-                        <p>
-                            <label>Address: </label>
-                            <textarea name="data[address]"><?= $userData['address']; ?></textarea>
-                        <p>
-                        <p>
-                            <label>City: </label>
-                            <input type="text" name="data[city]" value="<?= $userData['city']; ?>"/>
-                        <p>
-                        <p>
-                            <label>Postcode: </label>
-                            <input type="text" name="data[postcode]" value="<?= $userData['postal_code']; ?>"/>
-                        <p>
-                        <p>
-                            <label>Telephone: </label>
-                            <input type="text" name="data[telephone]" value="<?= $userData['telephone']; ?>"/>
-                        <p>
-                        <p>
-                            <input type="submit" name="btnSubmit" value="Update profile" class="button marL10"/>
-                        <p>
-                    </form>
-                </div>
-                <div>
-                    <img src="uploads/<?=$userData['profile_avatar']?>">
-                </div>
-            </div>
-
-        </div><!-- maincontent -->
-        <br>
-        <div id="footer">
-            <div class="footer">
-                Copyright &copy; 2018 ICD0007. <br/>
-                <a href="/mywebapp">Home</a> | <a href="about">About Us</a> | <a href="contact">Contact Us</a> <br/>
-                <span class="contact">Tel: +372-1111111&nbsp;
-                Email:icd007@icd0007.com</span>
-            </div>
-        </div><!-- footer -->
-
-    </div><!-- wrapper -->
-
-    </body>
-    </html>
