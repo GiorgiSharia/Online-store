@@ -1,9 +1,42 @@
 <?php
-      require_once ('protected_access_check.php');
-      session_start();
-      $id = $_SESSION['userID'];
+require_once ('application/database/DatabaseConnection.php');
+require_once ('protected_access_check.php');
 
-?>    
+$id = $_SESSION['userID'];
+class User {
+
+    public function getUserProfile()
+    {
+
+        // create PDO connection object
+        $dbConn = new DatabaseConnection();
+        $pdo = $dbConn->getConnection();
+
+        // get user id from session variable
+        $userID = $_SESSION['userID'];
+
+        $statement = $pdo->prepare("SELECT id, firstname, lastname, email, address, city, country, postal_code, telephone FROM `users` WHERE id = :id LIMIT 1");
+        $statement->bindParam(':id', $userID);
+        $statement->execute();
+
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        // no user matching the id
+        if (empty($result)) {
+            $_SESSION['error_message'] = 'Couldnt find user';
+            header('Location: /Online-store/Homepage.php');
+            return [];
+        }
+
+        $userData = $result[0];
+
+        return $userData;
+    }
+}
+
+$user = new User();
+$userData = $user->getUserProfile();
+?>
 
 <!DOCTYPE html>
 
@@ -65,16 +98,23 @@
     </div>
     <div class="row">
         <div class="col-lg-4">
-            <img id="user_profile_image">
+            <br/>
             <button class="btn buttn"><a href="editProfile.php">Edit Profile</a></button>
             <br/>
             <button class="btn buttn"><a href="changePSW.php">Change Password</a></button>
         </div>
 
         <div class="col-lg-4">
-            <h2 id="user_name">Hello, <?php echo($fname); ?></h2>
-            <p>ID: <?php echo($id); ?></p>
-            <p>Address: </p>
+            <h2 id="user_name">Hello, <?php echo($userData['firstname']); ?></h2>
+            <p>Full name: <?php echo($userData['firstname']);
+            echo " ";
+            echo($userData['lastname']); ?></p>
+            <p>E-mail: <?php echo($userData['email']); ?></p>
+            <p>Address: <?php echo($userData['address']); ?></p>
+            <p>City: <?php echo($userData['city']); ?></p>
+            <p>Country: <?php echo($userData['country']); ?></p>
+            <p>Postal Code: <?php echo($userData['postal_code']); ?></p>
+            <p>Telephone: <?php echo($userData['telephone']); ?></p>
         </div>
     </div>
     <footer id="footer">
