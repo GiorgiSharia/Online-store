@@ -1,4 +1,5 @@
 <?php
+include 'validator.php';
 if(isset($_POST['logMail'])) {
 
     require_once("database/DatabaseConnection.php");
@@ -24,6 +25,7 @@ if(isset($_POST['logMail'])) {
 
 
     $email = $_POST['logMail']; // required
+    $email = trimSpecialChars($email);
 
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';

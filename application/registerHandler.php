@@ -1,23 +1,35 @@
 <?php
+include 'validator.php';
 require_once ("database/DatabaseConnection.php");
     /**
      * This is the function that handles the registration
      */
 function register() {
     $postedData = $_POST['data'];
-
+    
+    //inputs validated
     $email = $postedData['email'];
+    $email = trimSpecialChars($email);
     $firstname = $postedData['firstname'];
+    $firstname = trimSpecialChars($firstname);
     $lastname = $postedData['lastname'];
+    $lastname = trimSpecialChars($lastname);
     $password = $postedData['password'];
+    $password = trimSpecialChars($password);
     $confirmPassword = $postedData['confirm_password'];
+    $confirmPassword = trimSpecialChars($confirmPassword);
     $address = $postedData['address'];
+    $address = trimSpecialChars($address);
     $city = $postedData['city'];
+    $city = trimSpecialChars($city);
     $country = $postedData['country'];
+    $country = trimSpecialChars($country);
     $postcode = $postedData['postcode'];
+    $postcode = trimSpecialChars($postcode);
     $telephone = $postedData['telephone'];
+    $telephone = trimSpecialChars($telephone);
 
-    // TODO: we should validate our data before inserting to database
+    
 
     // create PDO connection object
     $dbConn = new DatabaseConnection();

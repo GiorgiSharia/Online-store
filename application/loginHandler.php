@@ -6,11 +6,16 @@ require_once ("database/DatabaseConnection.php");
 unset($_SESSION['success_message']);
 unset($_SESSION['error_message']);
 
+include 'validator.php';
+
 function login() {
     $postedData = $_POST['data'];
-
+    
+    //inputs validated
     $email = $postedData['email'];
+    $email = trimSpecialChars($email);
     $password = $postedData['password'];
+    $password = trimSpecialChars($password);
 
     // create PDO connection object
     $dbConn = new DatabaseConnection();

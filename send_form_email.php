@@ -1,4 +1,5 @@
 <?php
+include 'application/validator.php';
 if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
@@ -24,12 +25,16 @@ if(isset($_POST['email'])) {
     }
 
 
-
+    //validation of inputs
     $first_name = $_POST['fname']; // required
+    $first_name = trimSpecialChars($first_name);
     $last_name = $_POST['lname']; // required
+    $last_name = trimSpecialChars($last_name);
     $email_from = $_POST['email']; // required
+    $email_from = trimSpecialChars($email_from);
     //$country = $_POST['country']; // not required
     $comments = $_POST['subject']; // required
+    $comments = trimSpecialChars($comments);
 
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';

@@ -5,16 +5,25 @@ require_once ("database/DatabaseConnection.php");
 /**
  * This is the function that handles the registration
  */
+include 'validator.php';
 function update() {
     $postedData = $_POST['data'];
 
+    //inputs validated
     $email = $postedData['email'];
+    $email = trimSpecialChars($email);
     $firstname = $postedData['firstname'];
+    $firstname = trimSpecialChars($firstname);
     $lastname = $postedData['lastname'];
+    $lastname = trimSpecialChars($lastname);
     $address = $postedData['address'];
+    $address = trimSpecialChars($address);
     $city = $postedData['city'];
+    $city = trimSpecialChars($city);
     $postcode = $postedData['postcode'];
+    $postcode = trimSpecialChars($postcode);
     $telephone = $postedData['telephone'];
+    $telephone = trimSpecialChars($telephone);
 
     // create PDO connection object
     $dbConn = new DatabaseConnection();

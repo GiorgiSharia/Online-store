@@ -4,5 +4,4 @@ function trimSpecialChars($String){
     $String = stripslashes($String);
     $String = htmlspecialchars($String);
     return $String;
-      
 }
