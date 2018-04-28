@@ -69,13 +69,13 @@ session_start();
 <h2 class="header">Add Product</h2>
 <hr>
 <div class="row">
-    <div class="col-lg-4 header" id="login">
+    <div class="col-lg-4 header">
         <?php
         if (isset($_SESSION['error_message'])) {
             echo $_SESSION['error_message'];
         }
         ?>
-        <form action="/Online-store/application/add_product.php" method="POST" id="addProduct" enctype="multipart/form-data>
+        <form action="/Online-store/application/add_product.php" method="POST" id="addProduct" enctype="multipart/form-data">
             <label for="prodTitle">Title:</label>
             <input id="prodTitle" class="form-control" type="text" name="data[title]" required>
             <br/>
@@ -107,15 +107,6 @@ session_start();
             <input class="buttn" type="submit" value="Add Product">
             <br/>
         </form>
-    </div>
-    <!--<div style="position:absolute; left:35%; top:20%; height: 550px; border-left:1px solid rgb(31, 31, 68);"></div>-->
-    <div class="col-lg-2" id="ad">
-        <label id="adLabel">SHOP NOW:</label>
-        <br/>
-        <a href=""><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
-        <a href=""><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
-        <a href=""><img src="images/item-3.jpg" class="ad" alt:"GoPro-on-legs"></a>
-        <a href=""><img src="images/item-4.jpg" class="ad" alt:"GoPro"></a>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

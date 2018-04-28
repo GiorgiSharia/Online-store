@@ -15,7 +15,7 @@ class User {
         // get user id from session variable
         $userID = $_SESSION['userID'];
 
-        $statement = $pdo->prepare("SELECT id, firstname, lastname, email, address, city, country, postal_code, telephone FROM `users` WHERE id = :id LIMIT 1");
+        $statement = $pdo->prepare("SELECT id, firstname, lastname, email, address, city, country, postal_code, telephone, is_admin FROM `users` WHERE id = :id LIMIT 1");
         $statement->bindParam(':id', $userID);
         $statement->execute();
 

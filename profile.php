@@ -90,7 +90,11 @@ require_once ('application/models/User.php');
             <br/>
             <button class="btn buttn"><a href="changePSW.php">Change Password</a></button>
             <br/>
-            <button class="btn buttn"><a href="">Order History</a></button>
+            <?php if($userData['is_admin']==1){ ?>
+                <button class="btn buttn"><a href="addProduct.php">Add Product</a></button>
+            <?php }else{ ?>
+                <button class="btn buttn"><a href="">Order History</a></button>
+            <?php } ?>
         </div>
     </div>
 </body>
