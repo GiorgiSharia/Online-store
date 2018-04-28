@@ -1,0 +1,21 @@
+h2, p, span{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+img{
+    height: 350px;
+}
+#price{
+    color: rgb(133, 1, 1);
+    font-size: 150%;
+}
+#stock{
+    color: rgb(2, 110, 2);
+    font-size: 150%;
+}
+#buy{
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border: solid;
+    width: 200px;
+}

@@ -5,7 +5,7 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,12 +18,13 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/css1.css">
+<link rel="stylesheet" href="css/prodProfile.css">
 <title>eShop</title>
 <script src="js/script.js"></script>
 </head>
 
 <body>
-    <div id="toHide">
+    <div>
         <nav>
             <div>
                 <ul id="navBar">
@@ -71,29 +72,26 @@
             </div>
         </nav>
     </div>
-    <div class="left col-md-4" >
-    <h3>About us :</h3>
-
-    <ul>
-      <li><b>2018 - </b> 'Group 3' was created at IT collage</li>
-    </ul>
-
-  <h4>Group members are:</h4>
-  <ul class="unordered">
-    <li><b>Giorgi Sharia</b></li>
-    <li><b>Giorgi Kutateladze</b></li>
-    <li><b>Sophio Japharidze</b></li>
-    <li><b>Lekso Migriauli</b></li>
-
-  </ul>
+<div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4">
+        <img src="images/item-1.jpg" alt="No picture found">
+    </div>
+    <div class="col-lg-4">
+        <h2>Fujifilm Instax Mini 9 Instant Camera - Lime Green</h2>
+        <p>Price: <span id="price">€ 56.50</span></p>
+        <p>Shipping Price: <span id="price">€ 9.99</span></p>
+        <p id="stock">In Stock</p>
+        <p id="description">
+            New Selfie Mirror, Picture size: 2.4 X 1.8 Inches<br/>
+            New Macro Lens adapter for close-ups - 35cm to 50cm<br/>
+            Automatic exposure measurement. The camera signals the recommended aperture setting with a flashing LED. This helps capture the perfect photo every time.<br/>
+            High-Key mode - Take brighter pictures with a soft look - perfect for portraits.<br/>
+            Electronic Shutter 1/60 sec. shutter speed ensures every moment is captures in an instant. 2 - AA Batteries<br/>
+        </p>
+        <button id="buy" class="btn">Buy Now</button>
+    </div>
 </div>
-<div class="right col-md-8"> 
-    <h2>About Project:</h2>
-    <h3><b>Taks: </b> E-commerce Website</h3>
-    <h4>The Objective of this project is to develop an online shopping store for selling/ buying
-        products.</h4>
-</div>
-
 
 </body>
 </html>

@@ -24,7 +24,15 @@
             <div>
                 <ul id="navBar">
                     <li class="navButton"><a href="homepage.php">Home</a></li>
-                    <li class="navButton"><a href="product.php">Products</a></li>
+                    <li class="navButton dropdown"><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Phones</a></li>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Smart Watches</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
                     <li class="navButton"><a href="about.php">About</a></li>
                     <li>
                         <div class="col-lg-6"  id="search">
@@ -121,7 +129,7 @@
         <div class="col-lg-2" id="ad">
             <div>SHOP NOW:</div>
             <br/>
-            <a href="productProfile.html" id="item-1"><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
+            <a href="productProfile.php" id="item-1"><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
             <a href=""><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
             <a href=""><img src="images/item-3.jpg" class="ad" alt:"GoPro-on-legs"></a>
             <a href=""><img src="images/item-4.jpg" class="ad" alt:"GoPro"></a>
