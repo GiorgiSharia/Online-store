@@ -25,13 +25,21 @@ require_once ('application/models/User.php');
 <script src="js/script.js"></script>
 </head>
 
-<body>
+<body background="images/profile-background.jpg">
     <div id="toHide">
         <nav>
             <div>
                 <ul id="navBar">
                     <li class="navButton"><a href="homepage.php">Home</a></li>
-                    <li class="navButton"><a href="product.php">Products</a></li>
+                    <li class="navButton dropdown"><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Phones</a></li>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Smart Watches</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
                     <li class="navButton"><a href="about.php">About</a></li>
                     <li>
                         <div class="col-lg-6"  id="search">
@@ -62,47 +70,29 @@ require_once ('application/models/User.php');
             </div>
         </nav>
     </div>
-    <div class="row">
+    <div class="row">  
+        <div class="col-lg-2"></div>      
+        <div class="col-lg-4">
+            <h2 id="user_name">Hello, <?php echo($userData['firstname']); ?></h2>
+            <p><b>Full name: </b><?php echo($userData['firstname']);
+            echo " ";
+            echo($userData['lastname']); ?></p>
+            <p><b>E-mail: </b><?php echo($userData['email']); ?></p>
+            <p><b>Address: </b><?php echo($userData['address']); ?></p>
+            <p><b>City: </b><?php echo($userData['city']); ?></p>
+            <p><b>Country: </b><?php echo($userData['country']); ?></p>
+            <p><b>Postal Code: </b><?php echo($userData['postal_code']); ?></p>
+            <p><b>Telephone: </b><?php echo($userData['telephone']); ?></p>
+        </div>
         <div class="col-lg-4">
             <br/>
             <button class="btn buttn"><a href="editProfile.php">Edit Profile</a></button>
             <br/>
             <button class="btn buttn"><a href="changePSW.php">Change Password</a></button>
-        </div>
-
-        <div class="col-lg-4">
-            <h2 id="user_name">Hello, <?php echo($userData['firstname']); ?></h2>
-            <p>Full name: <?php echo($userData['firstname']);
-            echo " ";
-            echo($userData['lastname']); ?></p>
-            <p>E-mail: <?php echo($userData['email']); ?></p>
-            <p>Address: <?php echo($userData['address']); ?></p>
-            <p>City: <?php echo($userData['city']); ?></p>
-            <p>Country: <?php echo($userData['country']); ?></p>
-            <p>Postal Code: <?php echo($userData['postal_code']); ?></p>
-            <p>Telephone: <?php echo($userData['telephone']); ?></p>
+            <br/>
+            <button class="btn buttn"><a href="">Order History</a></button>
         </div>
     </div>
-    <footer id="footer">
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-4">
-                <h2 id="contact_title"> Contact Details:</h2>
-                <ul>
-                    <li style="list-style:none">  <i class="material-icons">domain</i> Akadeemia tee 11,
-                        Tallinn, Estonia</li> 
-                    <li class="fa fa-envelope-o" style="font-size:20px"> info@team3.com</li>
-                    
-                    <li class="fa fa-mobile" style="font-size:20px">  + 372 599 22 22 22</li>   
-                </ul>
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-4">
-                <h2>About Us</h2>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-        </div>
-    </footer>    
 </body>
 
 </html>

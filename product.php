@@ -24,7 +24,15 @@
             <div>
                 <ul id="navBar">
                     <li class="navButton"><a href="homepage.php">Home</a></li>
-                    <li class="navButton"><a href="product.php">Products</a></li>
+                    <li class="navButton dropdown"><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Phones</a></li>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Smart Watches</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
                     <li class="navButton"><a href="about.php">About</a></li>
                     <li>
                         <div class="col-lg-6"  id="searchBox">
@@ -58,6 +66,40 @@
                 </ul>
             </div>
         </nav>
+    </div>
+    <div id="sideMenu">
+        <ul class="nav nav-stacked">
+            <li class="sidebar"><a id="electronics">Electronics</a>
+                <ul id="electronics_sub" class="sub">
+                    <li><a>Cameras</a></li>
+                    <li><a>Computers</a></li>
+                    <li><a>Tablets</a></li>
+                    <li><a>Phones</a></li>
+                </ul>
+            </li>
+            <li class="sidebar"><a id="clothing">Clothing</a>
+                <ul id="clothing_sub" class="sub">
+                    <li class="subElement"><a>Women</a></li>
+                    <li><a>Men</a></li>
+                    <li><a>Kids</a></li>
+                </ul>
+            </li>
+            <li class="sidebar"><a id="house">House</a>
+                <ul id="house_sub" class="sub">
+                    <li><a>Garden</a></li>
+                    <li><a>Kitchen</a></li>
+                    <li><a>Bathroom</a></li>
+                    <li><a>Pool</a></li>
+                </ul>
+            </li>
+            <li class="sidebar"><a id="shoes">Footwear</a>
+                <ul id="shoes_sub" class="sub">
+                    <li><a>Women</a></li>
+                    <li><a>Men</a></li>
+                    <li><a>Children</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

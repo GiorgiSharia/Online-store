@@ -30,7 +30,15 @@
             <div>
                 <ul id="navBar">
                     <li class="navButton"><a href="homepage.php">Home</a></li>
-                    <li class="navButton"><a href="product.php">Products</a></li>
+                    <li class="navButton dropdown"><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Phones</a></li>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Smart Watches</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
                     <li class="navButton"><a href="about.php">About</a></li>
                     <li>
                         <div class="col-lg-6"  id="search">
