@@ -22,7 +22,7 @@
 <script src="js/script.js"></script>
 </head>
 
-<body>
+<body background="images/profile-background.jpg">
     <div id="toHide">
         <nav>
             <div>
@@ -75,7 +75,7 @@
     <h3>About us :</h3>
 
     <ul>
-      <li><b>2018 - </b> 'Group 3' was created at IT collage</li>
+      <li><b>2018 - </b> 'Group 3' was created at IT college</li>
     </ul>
 
   <h4>Group members are:</h4>
