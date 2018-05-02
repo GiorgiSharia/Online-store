@@ -71,11 +71,12 @@
             </div>
         </nav>
     </div>
-
     <div>
         <img src="images/offer.jpg" alt="Image Not Found" class="slideshow"> 
         <img src="images/offer1.jpg" alt="Image Not Found" class="slideshow">
         <img src="images/offer2.jpg" alt="Image Not Found" class="slideshow">
     </div>
+    <a href='productProfile.php?product_id=90'><img src="images/FP032.jpg" style="width: 300px; height: 300px;"></a>
+    <a href='productProfile.php?product_id=91'><img src="images/Apple-iPhoneX.jpg" style="width: 300px; height: 500px;"></a>
 </body>
 </html>

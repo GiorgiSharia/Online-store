@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once ('application/models/Product.php');
 ?>
 <!DOCTYPE html>
 
@@ -75,19 +76,15 @@
 <div class="row">
     <div class="col-lg-1"></div>
     <div class="col-lg-4">
-        <img src="images/item-1.jpg" alt="No picture found">
+        <img src="uploads/<?php echo($productData['product_picture']); ?>" alt="No picture found">
     </div>
     <div class="col-lg-4">
-        <h2>Fujifilm Instax Mini 9 Instant Camera - Lime Green</h2>
-        <p>Price: <span id="price">€ 56.50</span></p>
-        <p>Shipping Price: <span id="price">€ 9.99</span></p>
+        <h2><?php echo($productData['title']); ?></h2>
+        <p>Price: <span id="price">€ <?php echo($productData['price']); ?></span></p>
+        <p>Shipping Price: <span id="price">€ <?php echo($productData['shipping_price']); ?></span></p>
         <p id="stock">In Stock</p>
-        <p id="description">
-            New Selfie Mirror, Picture size: 2.4 X 1.8 Inches<br/>
-            New Macro Lens adapter for close-ups - 35cm to 50cm<br/>
-            Automatic exposure measurement. The camera signals the recommended aperture setting with a flashing LED. This helps capture the perfect photo every time.<br/>
-            High-Key mode - Take brighter pictures with a soft look - perfect for portraits.<br/>
-            Electronic Shutter 1/60 sec. shutter speed ensures every moment is captures in an instant. 2 - AA Batteries<br/>
+        <p id="description"><?php echo($productData['description']); ?>
+            <br/>
         </p>
         <button id="buy" class="btn">Buy Now</button>
     </div>

@@ -7,7 +7,7 @@ $(function () {
             data: $('#regForm').serialize(),
             success: function (response) {
                 console.log(response);
-                alert('form was submitted');
+                alert('You were registered successfully');
             }
         });
     });
