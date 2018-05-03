@@ -77,7 +77,7 @@ session_start();
         ?>
         <form action="/Online-store/application/change_user_password.php" method="POST" id="changePswForm">
             <label for="currPassword">Current Password:</label>
-            <input id="currPassword" placeholder="Current Password" class="form-control" type="password" name="logMail" required>
+            <input id="currPassword" placeholder="Current Password" class="form-control" type="password" name="data[password]" required>
             <br/>
             <label for="newPassword">New Password:</label>
             <input id="newPassword" placeholder="New Password" class="form-control" type="password" name="newPassword" required>

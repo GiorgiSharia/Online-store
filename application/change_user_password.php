@@ -4,16 +4,51 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 
+require_once ("database/DatabaseConnection.php");
+
 include 'validator.php';
 function changePSW()
 {
     //inputs validated
-    //$password = $_POST['currPassword']; // required
+    $id = $_SESSION['userID'];
+    $postedData = $_POST['data'];
+    $password = $postedData['password'];
+    $password = trimSpecialChars($password);
     $newPassword = isset($_POST['newPassword']) ? $_POST['newPassword'] : null; // required
     $newPassword = trimSpecialChars($newPassword);
     $newPassword2 = isset($_POST['newPassword2']) ? $_POST['newPassword'] : null; // required
     $newPassword2 = trimSpecialChars($newPassword2);
     $newPasswordH = password_hash($newPassword, PASSWORD_DEFAULT);
+
+    $dbConn = new DatabaseConnection();
+    $pdo = $dbConn->getConnection();
+
+    $statement = $pdo->prepare("SELECT * FROM `users` WHERE id = :id LIMIT 1");
+    $statement->bindParam(':id', $id);
+    $statement->execute();
+
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $userData = $result[0];
+
+    // no user matching the email
+    if (empty($result)) {
+        $_SESSION['error_message'] = 'Invalid email / password!';
+        header('Location: /Online-store/profile.php');
+        return;
+    }
+
+    $userEncryptedPassword = $userData['password'];
+
+    // verify the incoming password with encrypted password
+    if (password_verify($password, $userEncryptedPassword)) {
+        $_SESSION['isLoggedIn'] = false;
+        $_SESSION['success_message'] = 'Password changed successfully';
+        header('Location: /Online-store/userForm.php');
+    } else {
+        echo "Old password is not correct";
+        echo nl2br("\n<a href='../ChangePSW.php'>Return to change password.</a>");
+        die();
+    }
 
     if($newPassword != $newPassword2){
         echo "New passwords don't match.";
@@ -72,8 +107,6 @@ function changePSW()
 
 
 if($_SESSION['isLoggedIn'] == true) {
-
-    require_once("database/DatabaseConnection.php");
 
     unset($_SESSION['success_message']);
     unset($_SESSION['error_message']);

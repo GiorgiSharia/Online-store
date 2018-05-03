@@ -52,7 +52,7 @@ function login() {
         var_dump($exception->getMessage());
     }
 
-    $_SESSION['error_message'] = 'NONO/ password!';
+    $_SESSION['error_message'] = 'Password is incorrect!';
     header('Location: /Online-store/userForm.php');
 }
 
