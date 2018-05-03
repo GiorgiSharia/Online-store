@@ -76,13 +76,6 @@
     <div class="col-lg-6 header"> 
             <h2 id="headerForReg">Edit your profile</h2>
             <hr>
-            <?php
-            if (isset($_SESSION['error_message'])) {
-                echo '<p>' . $_SESSION['error_message'] . '</p>';
-            } elseif (isset($_SESSION['success_message'])) {
-                echo '<p>' . $_SESSION['success_message'] . '</p>';
-            }
-            ?>
             <form class="row" id="updateForm" action="application/updateHandler.php" method="POST">
                 <div class="col-lg-6">
                     <label for="firstname">Firstname:</label>

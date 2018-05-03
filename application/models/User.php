@@ -2,7 +2,6 @@
 require_once ('application/database/DatabaseConnection.php');
 require_once ('protected_access_check.php');
 
-$id = $_SESSION['userID'];
 class User {
 
     public function getUserProfile()

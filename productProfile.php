@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once ('application/models/Product.php');
+    require_once ('application/models/User.php');
 ?>
 <!DOCTYPE html>
 
@@ -82,11 +83,19 @@
         <h2><?php echo($productData['title']); ?></h2>
         <p>Price: <span id="price">€ <?php echo($productData['price']); ?></span></p>
         <p>Shipping Price: <span id="price">€ <?php echo($productData['shipping_price']); ?></span></p>
-        <p id="stock">In Stock</p>
+        <?php if($productData['in_stock'] > 0){ ?>
+            <p>In Stock</p>
+        <?php }else{ ?>
+            <p>Out of Stock</p>
+        <?php } ?>
         <p id="description"><?php echo($productData['description']); ?>
             <br/>
         </p>
         <button id="buy" class="btn">Buy Now</button>
+        <br> <br> <br>
+        <?php if($userData['is_admin']==1){ ?>
+            <button class="btn buttn"><a href='editProduct.php?product_id=<?php echo($productData['id']);?>'>Edit Product</a></button>
+        <?php } ?>
     </div>
 </div>
 

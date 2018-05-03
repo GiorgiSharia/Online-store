@@ -11,7 +11,7 @@ class Product {
         $pdo = $dbConn->getConnection();
 
         // get product id from session variable
-        $productID = $_GET['product_id'];
+        $productID = $_GET["product_id"];
 
         $statement = $pdo->prepare("SELECT id, title, category, seller, description, price, shipping_price, product_picture, in_stock FROM `products` WHERE id = :id LIMIT 1");
         $statement->bindParam(':id', $productID);
@@ -21,7 +21,7 @@ class Product {
 
         // no user matching the id
         if (empty($result)) {
-            $_SESSION['error_message'] = 'Couldnt find product';
+            $_SESSION['error_message'] = 'Couldnt find products';
             header('Location: /Online-store/Homepage.php');
             return [];
         }
