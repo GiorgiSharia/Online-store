@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require_once ('application/models/Product.php');
 ?>
 <!DOCTYPE html>
 
@@ -19,7 +18,6 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/css1.css">
-<link rel="stylesheet" href="css/prodProfile.css">
 <title>eShop</title>
 <script src="js/script.js"></script>
 </head>
@@ -73,29 +71,52 @@
             </div>
         </nav>
     </div>
-<div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-4">
-        <img src="uploads/<?php echo($productData['product_picture']); ?>" alt="No picture found">
-    </div>
-    <div class="col-lg-4">
-        <h2><?php echo($productData['title']); ?></h2>
-        <p>Price: <span id="price">€ <?php echo($productData['price']); ?></span></p>
-        <p>Shipping Price: <span id="price">€ <?php echo($productData['shipping_price']); ?></span></p>
-        <?php if($productData['in_stock'] > 0){ ?>
-            <p>In Stock</p>
-        <?php }else{ ?>
-            <p>Out of Stock</p>
-        <?php } ?>
-        <p id="description"><?php echo($productData['description']); ?>
-            <br/>
-        </p>
-        <a href="pay.php"><button id="buy" class="btn">Buy Now</button></a>
-        <br> <br> <br>
-        <?php if($userData['is_admin']==1){ ?>
-            <button class="btn buttn"><a href='editProduct.php?product_id=<?php echo($productData['id']);?>'>Edit Product</a></button>
-        <?php } ?>
-    </div>
+    <div  id="content" style="margin-left: 550px;
+    margin-right: 500px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+    
+    ">
+    <h2>Pay by card </h2>
+    <img src="https://www.horusrc.com/media/wysiwyg/pay_by_cards.jpg" alt="cards" style="width:150px; height:25px;">
+    <br/>
+    <br/>
+    <b> Card Number </b><span style="margin-left: 10px;"><input type="text" id="card_number"></span>
+    <br/>
+    <br/>
+    <b>Expires </b>
+    <span style="margin-left: 50px;">
+    <select>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+    </select>
+    <span> - </span>
+    <select>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="04">08</option>
+        <option value="04">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    </span>
+    <br/>
+    <br/>
+    <b>Security Code</b>
+    <span style="margin-left: 10px;">
+    <input type="text" id="sec_code" size="4">
+    </span>
+    <br/>
+    <br/>
+    <input type="submit" value="Process Transaction" style=" margin-left: 70px;">
+
 </div>
-</body>
-</html>
