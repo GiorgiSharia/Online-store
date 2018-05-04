@@ -82,6 +82,9 @@
     <img src="https://www.horusrc.com/media/wysiwyg/pay_by_cards.jpg" alt="cards" style="width:150px; height:25px;">
     <br/>
     <br/>
+    <b> Card Holder </b><span style="margin-left: 20px;"><input type="text" id="card_holder"></span>
+    <br/>
+    <br/>
     <b> Card Number </b><span style="margin-left: 10px;"><input type="text" id="card_number"></span>
     <br/>
     <br/>

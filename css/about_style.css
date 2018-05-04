@@ -14,9 +14,10 @@ ul{
     list-style-position: inside;
 }
 .unordered{
-    margin-left: 95px;
+       margin-left: 95px;
         text-align: left;
         list-style: none;
+        
 }
 img{
     
