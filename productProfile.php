@@ -1,7 +1,22 @@
 <?php
     session_start();
     include ('application/models/Product.php');
-    include ('application/models/User.php');
+
+    if($_SESSION['isLoggedIn']){
+        $dbConn = new DatabaseConnection();
+        $pdo = $dbConn->getConnection();
+
+        // get user id from session variable
+        $userID = $_SESSION['userID'];
+
+        $statement = $pdo->prepare("SELECT id, firstname, lastname, email, address, city, country, postal_code, telephone, is_admin FROM `users` WHERE id = :id LIMIT 1");
+        $statement->bindParam(':id', $userID);
+        $statement->execute();
+
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $userData = $result[0];
+    }
+
 ?>
 <!DOCTYPE html>
 
