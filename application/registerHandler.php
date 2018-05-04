@@ -46,25 +46,46 @@ function register() {
         ':postal_code' => $postcode,
         ':telephone' => $telephone,
     ];
-
     try {
-        $statement = $pdo->prepare(
-            "INSERT INTO `users` (`firstname`, `lastname`, `password`, `email`, `address`, `city`, `country`, `postal_code`, `telephone`) 
-                          VALUES (:firstname, :lastname, :password, :email, :address, :city, :country, :postal_code, :telephone)"
-        );
+        $emCheck = $pdo->prepare("SELECT * FROM `users` WHERE email = :email LIMIT 1");
+        $emCheck->bindParam(':email', $email);
+        $emCheck->execute();
 
-        $statement->execute($params);
+        $result = $emCheck->fetchAll(PDO::FETCH_ASSOC);
+        $userData = $result[0];
 
-        if ($pdo->lastInsertId()) {
-            return "Registration successful";
+        // no user matching the email
+        if (!empty($result)) {
+           // $_SESSION['error_message'] = 'Invalid email / password!';
+            //header('Location: /Online-store/userForm.php');
+            $answer =  'email exists';
+            echo('email exists');
+        }else{
+            try {
+                $statement = $pdo->prepare(
+                    "INSERT INTO `users` (`firstname`, `lastname`, `password`, `email`, `address`, `city`, `country`, `postal_code`, `telephone`) 
+                                  VALUES (:firstname, :lastname, :password, :email, :address, :city, :country, :postal_code, :telephone)"
+                );
+        
+                $statement->execute($params);
+        
+                if ($pdo->lastInsertId()) {
+                    echo "Registration successful";
+                }
+        
+            } catch (PDOException $e) {
+                // usually this error is logged in application log and we should return an error message that's meaninful to user 
+                return $e->getMessage();
+                echo "Registration was not successful";
+            }
+        
+            
         }
-
-    } catch (PDOException $e) {
-        // usually this error is logged in application log and we should return an error message that's meaninful to user 
-        return $e->getMessage();
+    } catch (PDOException $exception) {
+        var_dump($exception->getMessage());
     }
 
-    return "Registration was not successful";
+   
 }
 
 // call to the register function
