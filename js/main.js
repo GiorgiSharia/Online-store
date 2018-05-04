@@ -6,10 +6,8 @@ $(function () {
             url: '/Online-store/application/registerHandler.php',
             data: $('#regForm').serialize(),
             success: function (response) {
-                //console.log(response);
-               
                 alert(response);
-                
+                location.reload();
             }
         });
     });
