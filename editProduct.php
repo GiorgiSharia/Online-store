@@ -82,7 +82,7 @@ require_once ('application/models/Product.php');
                 <p><?php echo("ID: "); echo($productData['id']); ?></p>
                 <br>
                 <label for="photo">Photo:</label>
-                <img id="photo" src="uploads/<?php echo($productData['product_picture']); ?>" alt="No picture found">
+                <img id="photo" name="data[photo]" src="uploads/<?php echo($productData['product_picture']); ?>" alt="No picture found">
                 <br/>
 
                 <label for="title">Title:</label>
