@@ -56,6 +56,10 @@ function register() {
         $statement->execute($params);
 
         if ($pdo->lastInsertId()) {
+             $select = mysql_query("SELECT `email` FROM `users` WHERE `email` = '".$_POST['email']."'") or exit(mysql_error());
+            if(mysql_num_rows($select)) {
+               return "This email is already being used";
+            }
             return "Registration successful";
         }
 

@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once ('application/categoryHandler.php');
 ?>
 <!DOCTYPE html>
 
@@ -67,7 +68,7 @@
             </div>
         </nav>
     </div>
-    <div id="sideMenu">
+   <!-- <div id="sideMenu">
         <ul class="nav nav-stacked">
             <li class="sidebar"><a id="electronics">Electronics</a>
                 <ul id="electronics_sub" class="sub">
@@ -100,7 +101,10 @@
                 </ul>
             </li>
         </ul>
-    </div>
+    </div>-->
+    <a href='productProfile.php?product_id=90'><img src="images/FP032.jpg" style="width: 300px; height: 300px;"></a>
+    <a href='productProfile.php?product_id=91'><img src="images/Apple-iPhoneX.jpg" style="width: 300px; height: 500px;"></a>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

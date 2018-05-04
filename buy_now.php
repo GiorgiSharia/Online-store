@@ -30,8 +30,8 @@
                     <li class="navButton"><a href="homepage.php">Home</a></li>
                     <li class="navButton dropdown"><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="product.php">All</a></li>
-                            <li><a href='product.php?category=Phones'>Phones</a></li>
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Phones</a></li>
                             <li><a href="#">Cameras</a></li>
                             <li><a href="#">Smart Watches</a></li>
                             <li><a href="#">Accessories</a></li>
@@ -71,15 +71,8 @@
             </div>
         </nav>
     </div>
-    <div>
-    <a href='productProfile.php?product_id=93'><img src="images/offer.jpg" alt="Image Not Found" class="slideshow"></a> 
-    <a href='productProfile.php?product_id=90'><img src="images/offer1.jpg" alt="Image Not Found" class="slideshow"></a>
-    <a href='productProfile.php?product_id=94'><img src="images/offer2.jpg" alt="Image Not Found" class="slideshow"></a>
-    </div>
-    <div class="product_box">
-        <a href='productProfile.php?product_id=90'><img src="images/FP032.jpg" style="width: 300px; height: 300px;"></a>
-    </div>
-    
-    <a href='productProfile.php?product_id=91'><img src="images/Apple-iPhoneX.jpg" style="width: 300px; height: 300px;"></a>
-</body>
-</html>
+<div id="content">
+    <input type="text" id="card_number">
+    <br/>
+    <input type="text" id="ccv">
+</div>
