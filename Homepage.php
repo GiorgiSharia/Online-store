@@ -76,10 +76,7 @@
     <a href='productProfile.php?product_id=90'><img src="images/offer1.jpg" alt="Image Not Found" class="slideshow"></a>
     <a href='productProfile.php?product_id=94'><img src="images/offer2.jpg" alt="Image Not Found" class="slideshow"></a>
     </div>
-    <div class="product_box">
-        <a href='productProfile.php?product_id=90'><img src="images/FP032.jpg" style="width: 300px; height: 300px;"></a>
-    </div>
-    
+    <a href='productProfile.php?product_id=90'><img src="images/FP032.jpg" style="width: 300px; height: 300px;"></a>    
     <a href='productProfile.php?product_id=91'><img src="images/Apple-iPhoneX.jpg" style="width: 300px; height: 300px;"></a>
 </body>
 </html>
