@@ -71,52 +71,53 @@
             </div>
         </nav>
     </div>
-    <div  id="content" style="margin-left: 550px;
-    margin-right: 500px;
-    border: 1px solid silver;
-    padding: 8px;    
-    border-radius: 4px;
-    
-    ">
+<div  id="content">
     <h2>Pay by card </h2>
     <img src="https://www.horusrc.com/media/wysiwyg/pay_by_cards.jpg" alt="cards" style="width:150px; height:25px;">
     <br/>
     <br/>
-    <b> Card Number </b><span style="margin-left: 10px;"><input type="text" id="card_number"></span>
-    <br/>
-    <br/>
-    <b>Expires </b>
-    <span style="margin-left: 50px;">
-    <select>
-        <option value="2021">2021</option>
-        <option value="2020">2020</option>
-        <option value="2019">2019</option>
-        <option value="2018">2018</option>
-    </select>
-    <span> - </span>
-    <select>
-        <option value="01">01</option>
-        <option value="02">02</option>
-        <option value="03">03</option>
-        <option value="04">04</option>
-        <option value="05">05</option>
-        <option value="06">06</option>
-        <option value="07">07</option>
-        <option value="04">08</option>
-        <option value="04">09</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-    </select>
-    </span>
-    <br/>
-    <br/>
-    <b>Security Code</b>
-    <span style="margin-left: 10px;">
-    <input type="text" id="sec_code" size="4">
-    </span>
-    <br/>
-    <br/>
-    <input type="submit" value="Process Transaction" style=" margin-left: 70px;">
-
+    <form id="card_data" method="POST">
+        <b> Card Number </b><span style="margin-left: 10px;">
+        <input type="text" id="card_number" name="data[cardNumber]"></span>
+        <br/>
+        <br/>
+        <b>Expires </b>
+        <span style="margin-left: 50px;">
+        <select name="data[year]">
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+        </select>
+        <span> - </span>
+        <select name="data[month]">
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="04">08</option>
+            <option value="04">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        </span>
+        <br/>
+        <br/>
+        <b>Security Code</b>
+        <span style="margin-left: 10px;">
+        <input type="text" id="sec_code" size="4" name="data[ccv]">
+        </span>
+        <br/>
+        <br/>
+        <input type="submit" value="Process Transaction" style=" margin-left: 70px;" name="data[submit]">
+    </form>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
