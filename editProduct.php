@@ -77,7 +77,7 @@ require_once ('application/models/Product.php');
     <div class="col-lg-6 header">
         <h2 id="headerForReg">Edit your profile</h2>
         <hr>
-        <form class="row" id="updateProduct" action="application/productUpdate.php" method="POST" enctype="multipart/form-data">
+        <form class="row" id="updateProduct" action="application/productUpdate.php?product_id=<?php echo($productData['id']);?>" method="POST" enctype="multipart/form-data">
             <div class="col-lg-6">
                 <p><?php echo("ID: "); echo($productData['id']); ?></p>
                 <br>

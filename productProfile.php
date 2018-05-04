@@ -1,6 +1,7 @@
 <?php
     session_start();
-    require_once ('application/models/Product.php');
+    include ('application/models/Product.php');
+    include ('application/models/User.php');
 ?>
 <!DOCTYPE html>
 
