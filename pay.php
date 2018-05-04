@@ -71,13 +71,7 @@
             </div>
         </nav>
     </div>
-    <div  id="content" style="margin-left: 550px;
-    margin-right: 500px;
-    border: 1px solid silver;
-    padding: 8px;    
-    border-radius: 4px;
-    
-    ">
+<div  id="content">
     <h2>Pay by card </h2>
     <img src="https://www.horusrc.com/media/wysiwyg/pay_by_cards.jpg" alt="cards" style="width:150px; height:25px;">
     <br/>
@@ -122,4 +116,7 @@
     <br/>
     <input type="submit" value="Process Transaction" style=" margin-left: 70px;">
 
-</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>

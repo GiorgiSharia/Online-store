@@ -73,4 +73,10 @@ img{
 #contact_title{
     padding-left: 38px;
 }
-
+#content{
+    margin-left: 550px;
+    margin-right: 500px;
+    border: 1px solid silver;
+    padding: 8px;    
+    border-radius: 4px;
+}
