@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once ('application/categoryHandler.php');
+    require_once("application/Filter.php");
 ?>
 <!DOCTYPE html>
 
@@ -27,11 +27,11 @@
                     <li class="navButton"><a href="homepage.php">Home</a></li>
                     <li class="navButton dropdown"><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Phones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Smart Watches</a></li>
-                            <li><a href="#">Accessories</a></li>
+                            <li><a href="product.php">All</a></li>
+                            <li><a href='product.php?category=Phones'>Phones</a></li>
+                            <li><a href='product.php?category=Cameras'>Cameras</a></li>
+                            <li><a href="product.php?category=SmartWatches">Smart Watches</a></li>
+                            <li><a href="product.php?category=Accessories">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="navButton"><a href="about.php">About</a></li>
@@ -68,42 +68,28 @@
             </div>
         </nav>
     </div>
-   <!-- <div id="sideMenu">
-        <ul class="nav nav-stacked">
-            <li class="sidebar"><a id="electronics">Electronics</a>
-                <ul id="electronics_sub" class="sub">
-                    <li><a>Cameras</a></li>
-                    <li><a>Computers</a></li>
-                    <li><a>Tablets</a></li>
-                    <li><a>Phones</a></li>
-                </ul>
-            </li>
-            <li class="sidebar"><a id="clothing">Clothing</a>
-                <ul id="clothing_sub" class="sub">
-                    <li class="subElement"><a>Women</a></li>
-                    <li><a>Men</a></li>
-                    <li><a>Kids</a></li>
-                </ul>
-            </li>
-            <li class="sidebar"><a id="house">House</a>
-                <ul id="house_sub" class="sub">
-                    <li><a>Garden</a></li>
-                    <li><a>Kitchen</a></li>
-                    <li><a>Bathroom</a></li>
-                    <li><a>Pool</a></li>
-                </ul>
-            </li>
-            <li class="sidebar"><a id="shoes">Footwear</a>
-                <ul id="shoes_sub" class="sub">
-                    <li><a>Women</a></li>
-                    <li><a>Men</a></li>
-                    <li><a>Children</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>-->
-    <a href='productProfile.php?product_id=90'><img src="images/FP032.jpg" style="width: 300px; height: 300px;"></a>
-    <a href='productProfile.php?product_id=91'><img src="images/Apple-iPhoneX.jpg" style="width: 300px; height: 500px;"></a>
+<!--<div id="sideMenu">
+    <ul class="nav nav-stacked">
+        <li class="sidebar"><a href="product.php">All</a></li>
+        <li class="sidebar"><a href='product.php?category=Phones'>Phones</a></li>
+        <li class="sidebar"><a href='product.php?category=Cameras'>Cameras</a></li>
+        <li class="sidebar"><a href="product.php?category=SmartWatches">Smart Watches</a></li>
+        <li class="sidebar"><a href="product.php?category=Accessories">Accessories</a></li>
+    </ul>
+</div>-->
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <?php foreach($allProducts as $products) { ?>
+        <a href='productProfile.php?product_id=<?= $products['id'] ?>'>
+            <p id="title_text"><b><?= $products['title'] ?><b></p>
+            <img src="uploads\<?= $products['product_picture'] ?>" style="width: 300px; height: 300px;">
+            <p id="price_text">Price: <b>€ <?= $products['price'] ?><b></p>
+            <hr>
+        </a>
+        <?php } ?></div>
+    <div class="col-lg-4"></div>
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

@@ -31,11 +31,11 @@
                     <li class="navButton"><a href="homepage.php">Home</a></li>
                     <li class="navButton dropdown"><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Phones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Smart Watches</a></li>
-                            <li><a href="#">Accessories</a></li>
+                            <li><a href="product.php">All</a></li>
+                            <li><a href='product.php?category=Phones'>Phones</a></li>
+                            <li><a href='product.php?category=Cameras'>Cameras</a></li>
+                            <li><a href="product.php?category=SmartWatches">Smart Watches</a></li>
+                            <li><a href="product.php?category=Accessories">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="navButton"><a href="about.php">About</a></li>

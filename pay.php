@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once("protected_access_check.php");
 ?>
 <!DOCTYPE html>
 

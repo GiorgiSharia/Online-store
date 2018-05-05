@@ -43,7 +43,7 @@ label{
     background-color: rgb(31, 31, 68);
     border-radius: 4px;
     border: #888;
-    width: 10%;
+    width: 30%;
     cursor: pointer;
     text-align: left !important;
 }
@@ -79,4 +79,14 @@ img{
     border: 1px solid silver;
     padding: 8px;    
     border-radius: 4px;
+}
+#price_text{
+    color: red !important;
+}
+#title_text{
+    color: black !important;
+}
+hr{
+    height: 1px;
+    background-color: rgb(31, 31, 68);
 }

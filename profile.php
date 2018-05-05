@@ -25,7 +25,7 @@ require_once ('application/models/User.php');
 <script src="js/script.js"></script>
 </head>
 
-<body background="images/profile-background.jpg">
+<body>
     <div id="toHide">
         <nav>
             <div>
@@ -33,11 +33,11 @@ require_once ('application/models/User.php');
                     <li class="navButton"><a href="homepage.php">Home</a></li>
                     <li class="navButton dropdown"><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Phones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Smart Watches</a></li>
-                            <li><a href="#">Accessories</a></li>
+                            <li><a href="product.php">All</a></li>
+                            <li><a href='product.php?category=Phones'>Phones</a></li>
+                            <li><a href='product.php?category=Cameras'>Cameras</a></li>
+                            <li><a href="product.php?category=SmartWatches">Smart Watches</a></li>
+                            <li><a href="product.php?category=Accessories">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="navButton"><a href="about.php">About</a></li>
@@ -71,8 +71,10 @@ require_once ('application/models/User.php');
         </nav>
     </div>
     <div class="row">  
-        <div class="col-lg-2"></div>      
         <div class="col-lg-4">
+            <img src="https://image.flaticon.com/sprites/new_packs/145977-user-avatars-compilation.png">
+        </div>      
+        <div class="col-lg-2">
             <h2 id="user_name">Hello, <?php echo($userData['firstname']); ?></h2>
             <p><b>Full name: </b><?php echo($userData['firstname']);
             echo " ";
@@ -84,7 +86,7 @@ require_once ('application/models/User.php');
             <p><b>Postal Code: </b><?php echo($userData['postal_code']); ?></p>
             <p><b>Telephone: </b><?php echo($userData['telephone']); ?></p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-2">
             <br/>
             <button class="btn buttn"><a href="editProfile.php">Edit Profile</a></button>
             <br/>
@@ -95,6 +97,9 @@ require_once ('application/models/User.php');
                 <br>
             <?php }?>
             <button class="btn buttn"><a href="">Order History</a></button>
+        </div>
+        <div class="col-lg-4">
+            <img src="https://image.flaticon.com/sprites/new_packs/145977-user-avatars-compilation.png">
         </div>
     </div>
 </body>
