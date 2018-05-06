@@ -20,10 +20,10 @@ require_once ('application/models/User.php');
 
 <div id="includeContent"></div>
     <div class="row">  
-        <div class="col-lg-4">
-            <img src="https://image.flaticon.com/sprites/new_packs/145977-user-avatars-compilation.png">
+        <div class="col-lg-3">
+            <a href=""><img src="images/offer_1.jpg"></a>
         </div>      
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <h2 id="user_name">Hello, <?php echo($userData['firstname']); ?></h2>
             <p><b>Full name: </b><?php echo($userData['firstname']);
             echo " ";
@@ -35,7 +35,7 @@ require_once ('application/models/User.php');
             <p><b>Postal Code: </b><?php echo($userData['postal_code']); ?></p>
             <p><b>Telephone: </b><?php echo($userData['telephone']); ?></p>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <br/>
             <button class="btn buttn"><a href="editProfile.php">Edit Profile</a></button>
             <br/>
@@ -47,8 +47,8 @@ require_once ('application/models/User.php');
             <?php }?>
             <button class="btn buttn"><a href="">Order History</a></button>
         </div>
-        <div class="col-lg-4">
-            <img src="https://image.flaticon.com/sprites/new_packs/145977-user-avatars-compilation.png">
+        <div class="col-lg-3">
+            <a href=""><img src="images/offer_2.jpg"></a>
         </div>
     </div>
 </body>

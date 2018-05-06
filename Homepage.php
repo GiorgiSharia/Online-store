@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require("application/models/User.php");
 ?>
 <!DOCTYPE html>
 
@@ -27,8 +28,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/8AAH//AQB//5QAf/+LAH//NgB//xwAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//AAB//wAAf/85AH//sQB//80A
 f//HD48AAAAPAAAADwAAAAcAAPAPAAAAHwAAAB8AAAAPAAAADwAAAA8AAAAHAAAABwAAAAMAAP/j
 AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
-
-
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- fa fa symobls -->
@@ -55,7 +54,11 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
                             <li><a href="product.php?category=Accessories">Accessories</a></li>
                         </ul>
                     </li>
-                    <li class="navButton"><a href="about.php">About</a></li>
+                    <?php if($userData['is_admin']==1){ ?>
+                        <li class="navButton toRight"><a href="customers.php">Manage Customers</a></li>
+                    <?php }else{?>
+                        <li class="navButton"><a href="about.php">About</a></li>
+                    <?php } ?>
                     <li>
                         <div class="col-lg-6"  id="search">
                             <div class="input-group well-align" >
@@ -78,7 +81,11 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
                             </div>
                         </div>
                     </li>
-                    <li class="navButton toRight"><a href="contact.php">Contact</a></li>
+                    <?php if($userData['is_admin']==1){ ?>
+                        <li class="navButton toRight"><a href="addProduct.php">Add Products</a></li>
+                    <?php }else{ ?>
+                        <li class="navButton toRight"><a href="contact.php"></i>Contact</a></li>
+                    <?php } ?>
                     <?php if($_SESSION['isLoggedIn']){ ?>
                         <li class="navButton toRight" id="user"><a href="/Online-store/logout.php"><i class="fa fa-user"></i> Sign Out</a></li>
                         <li class="navButton toRight"><a href="profile.php">My Profile</a></li>
@@ -91,10 +98,12 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
     </div>
     <div>
     <a href='productProfile.php?product_id=93'><img src="images/offer.jpg" alt="Image Not Found" class="slideshow"></a> 
-    <a href='productProfile.php?product_id=90'><img src="images/offer1.jpg" alt="Image Not Found" class="slideshow"></a>
-    <a href='productProfile.php?product_id=94'><img src="images/offer2.jpg" alt="Image Not Found" class="slideshow"></a>
-    </div>    
-    <a href='productProfile.php?product_id=90'><img src="images/FP032.jpg" style="width: 300px; height: 300px;"></a>    
-    <a href='productProfile.php?product_id=91'><img src="images/Apple-iPhoneX.jpg" style="width: 300px; height: 300px;"></a>
+    <a href='productProfile.php?product_id=98'><img src="images/slide-2.png" alt="Image Not Found" class="slideshow"></a>
+    <a href='productProfile.php?product_id=94'><img src="images/slide-2.jpg" alt="Image Not Found" class="slideshow"></a>
+    </div>  
+    <div class="row">  
+        <a class="col-lg-6" href="product.php?category=SmartWatches" style="font-size:25px; font-weight: bold"><img src="images/FP032.jpg" style="width: 300px; height: 300px;">SHOP SMART WATCHES</a>    
+        <a class="col-lg-6" href="product.php?category=Phones" style="font-size:25px; font-weight: bold"><img src="images/Apple-iPhoneX.jpg" style="width: 300px; height: 300px;">SHOP PHONES</a>
+  </div>
 </body>
 </html>

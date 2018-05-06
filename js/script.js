@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $(function(){
-        $("#includeContent").load("navbar.php"); 
+        $("#includeContent").load("navbar.php");
     });
     var pool = $(".slideshow");
     var index = 0;
@@ -17,7 +17,7 @@ $(document).ready(function(){
             $(pool[index - 1]).css("display","none");
         }
         index++;
-        $(setTimeout(slideshow,2000));
+        $(setTimeout(slideshow,3000));
     }
     $(".navButton").hover(function(){
         $(this).css("background-color", "#acb3bf");

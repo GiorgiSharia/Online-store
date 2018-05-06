@@ -27,9 +27,7 @@ require_once ('application/models/Product.php');
 
 <div id="includeContent"></div>
 <div class="row">
-    <div class="col-lg-3">
-        <a href=""><img src="images/offer_1.jpg"></a>
-    </div>
+    <div class="col-lg-3"></div>
     <div class="col-lg-6 header">
         <h2 id="headerForReg">Edit your profile</h2>
         <hr>
@@ -68,7 +66,5 @@ require_once ('application/models/Product.php');
             <br/>
         </form>
     </div>
-    <div class="col-lg-3">
-        <a href=""><img src="images/offer_2.jpg"></a>
-    </div>
+    <div class="col-lg-3"></div>
 </div>

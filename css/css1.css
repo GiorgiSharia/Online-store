@@ -3,6 +3,7 @@
 }
 a{
     text-decoration: none !important;
+    color: black;
 }
 #navBar{
     display: inline-block;
@@ -90,3 +91,10 @@ hr{
     height: 1px;
     background-color: rgb(31, 31, 68);
 }
+table{
+    margin-left: 20%;
+}
+td, th{
+    padding:10px;
+}
+

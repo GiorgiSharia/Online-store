@@ -1,6 +1,5 @@
 <?php
 require_once ('application/database/DatabaseConnection.php');
-require_once ('protected_access_check.php');
 
 class User {
 

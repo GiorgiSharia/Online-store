@@ -82,9 +82,9 @@
             <div>SHOP NOW:</div>
             <br/>
             <a href="productProfile.php" id="item-1"><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
-            <a href=""><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
-            <a href=""><img src="images/item-3.jpg" class="ad" alt:"GoPro-on-legs"></a>
-            <a href=""><img src="images/item-4.jpg" class="ad" alt:"GoPro"></a>
+            <a href='productProfile.php?product_id=99'><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
+            <a href='productProfile.php?product_id=96'><img src="images/item-3.jpg" class="ad" alt:"GoPro-on-legs"></a>
+            <a href='productProfile.php?product_id=100'><img src="images/item-4.jpg" class="ad" alt:"GoPro"></a>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
