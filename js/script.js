@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $(function(){
+        $("#includeContent").load("navbar.php"); 
+    });
     var pool = $(".slideshow");
     var index = 0;
     slideshow();
