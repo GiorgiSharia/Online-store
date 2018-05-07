@@ -1,4 +1,5 @@
 <?php
+include 'validator.php';
 require_once ('database/DatabaseConnection.php');
 
 class Search {
@@ -11,6 +12,7 @@ class Search {
         $pdo = $dbConn->getConnection();   
 
         $keyword = $_POST["query"];
+        $keyword= trimSpecialChars($keyword);
 
         $statement = $pdo->prepare("SELECT * FROM `products` WHERE title LIKE '%".$keyword."%'");
         $statement->execute();
