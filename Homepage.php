@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require("application/models/User.php");
 ?>
 <!DOCTYPE html>
 
@@ -53,44 +52,33 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
                             <li><a href="product.php?category=SmartWatches">Smart Watches</a></li>
                             <li><a href="product.php?category=Accessories">Accessories</a></li>
                         </ul>
-                    </li>
-                    <?php if($userData['is_admin']==1){ ?>
-                        <li class="navButton toRight"><a href="customers.php">Manage Customers</a></li>
-                    <?php }else{?>
+                    </li>                  
                         <li class="navButton"><a href="about.php">About</a></li>
-                    <?php } ?>
-                    <li>
-                    <form action="application/Search.php" method="POST">
-                        <div class="col-lg-6"  id="search">
-                            <div class="input-group well-align" >
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-                                        <span id="title">Departments</span> 
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" id="drop">
-                                        <li><a href="#">Electronics</a></li>
-                                        <li><a href="#">Clothing</a></li>
-                                        <li><a href="#">House</a></li>
-                                        <li><a href="#">Footwear</a></li>
-                                    </ul>                               
+                    <li>      
+                        <form action="/Online-store/searchResults.php" method="POST">              
+                            <div class="col-lg-6"  id="search">
+                                <div class="input-group well-align" >
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                                            <span id="title">Departments</span> 
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" id="drop">
+                                            <li><a href="#">Electronics</a></li>
+                                            <li><a href="#">Clothing</a></li>
+                                            <li><a href="#">House</a></li>
+                                            <li><a href="#">Footwear</a></li>
+                                        </ul>                               
+                                    </div>
+                                    <input type="text" name="q" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                                    <i class="glyphicon glyphicon-search"></i><input class="btn" type="submit" name="submit" value="Search">
+                                    </span>
                                 </div>
-                                
-                                <input type="text" name="query" class="form-control" placeholder="Search for...">
-                                
-                                <span class="input-group-btn">
-                                    <input class="btn" type="submit"><i class="glyphicon glyphicon-search"></i> Search</input>
-                                </span>
-                    
                             </div>
-                        </div>
-                    </form>
+                        </form>
                     </li>
-                    <?php if($userData['is_admin']==1){ ?>
-                        <li class="navButton toRight"><a href="addProduct.php">Add Products</a></li>
-                    <?php }else{ ?>
                         <li class="navButton toRight"><a href="contact.php"></i>Contact</a></li>
-                    <?php } ?>
                     <?php if($_SESSION['isLoggedIn']){ ?>
                         <li class="navButton toRight" id="user"><a href="/Online-store/logout.php"><i class="fa fa-user"></i> Sign Out</a></li>
                         <li class="navButton toRight"><a href="profile.php">My Profile</a></li>

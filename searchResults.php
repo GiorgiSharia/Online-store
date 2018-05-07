@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("application/Search.php");
+    require_once("C:\MAMP\htdocs\Online-store\application\Search.php");
 ?>
 <!DOCTYPE html>
 
@@ -30,7 +30,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

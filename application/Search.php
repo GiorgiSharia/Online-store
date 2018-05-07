@@ -8,24 +8,24 @@ class Search {
 
         // create PDO connection object
         $dbConn = new DatabaseConnection();
-        $pdo = $dbConn->getConnection();
+        $pdo = $dbConn->getConnection();   
 
-        $info=$_POST["data"];
-        $keyword=$info['query'];
-    
-        $statement = $pdo->prepare("SELECT * FROM `products` WHERE (title LIKE '%".$keyword."%')");
+        $keyword = $_POST["q"];
+
+        $statement = $pdo->prepare("SELECT * FROM `products` WHERE title LIKE '%".$keyword."%'");
         $statement->execute();
         
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        
 
-        // no user matching the id
+        // no user matching the keyword
         if (empty($result)) {
             $_SESSION['error_message'] = 'Couldnt find products';
             header('Location: /Online-store/Homepage.php');
             return [];
         }
         
-
+  
         $matchProducts=$result;
 
         return $matchProducts;
@@ -33,6 +33,5 @@ class Search {
 }
 $match = new Search();
 $matchProducts = $match->searchProducts();
-foreach($matchProducts as $match){
-    echo $match['title'];
-}
+
+

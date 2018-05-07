@@ -44,6 +44,8 @@ require_once ('application/models/User.php');
             <?php if($userData['is_admin']==1){ ?>
                 <button class="btn buttn"><a href="addProduct.php">Add Product</a></button>
                 <br>
+                <button class="btn buttn"><a href="customers.php">Manage Customers</a></button>
+                <br/>
             <?php }?>
             <button class="btn buttn"><a href="">Order History</a></button>
         </div>
