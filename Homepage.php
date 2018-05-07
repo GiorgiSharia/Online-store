@@ -60,6 +60,7 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
                         <li class="navButton"><a href="about.php">About</a></li>
                     <?php } ?>
                     <li>
+                    <form action="application/Search.php" method="POST">
                         <div class="col-lg-6"  id="search">
                             <div class="input-group well-align" >
                                 <div class="input-group-btn">
@@ -74,12 +75,16 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
                                         <li><a href="#">Footwear</a></li>
                                     </ul>                               
                                 </div>
-                                <input type="text" class="form-control" placeholder="Search for...">
+                                
+                                <input type="text" name="query" class="form-control" placeholder="Search for...">
+                                
                                 <span class="input-group-btn">
-                                    <button class="btn" type="button"><i class="glyphicon glyphicon-search"></i> Search</button>
+                                    <input class="btn" type="submit"><i class="glyphicon glyphicon-search"></i> Search</input>
                                 </span>
+                    
                             </div>
                         </div>
+                    </form>
                     </li>
                     <?php if($userData['is_admin']==1){ ?>
                         <li class="navButton toRight"><a href="addProduct.php">Add Products</a></li>
@@ -99,7 +104,7 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
     <div>
     <a href='productProfile.php?product_id=93'><img src="images/offer.jpg" alt="Image Not Found" class="slideshow"></a> 
     <a href='productProfile.php?product_id=98'><img src="images/slide-2.png" alt="Image Not Found" class="slideshow"></a>
-    <a href='productProfile.php?product_id=94'><img src="images/slide-2.jpg" alt="Image Not Found" class="slideshow"></a>
+    <a href='productProfile.php?product_id=94'><img src="images/slide-3.jpg" alt="Image Not Found" class="slideshow"></a>
     </div>  
     <div class="row">  
         <a class="col-lg-6" href="product.php?category=SmartWatches" style="font-size:25px; font-weight: bold"><img src="images/FP032.jpg" style="width: 300px; height: 300px;">SHOP SMART WATCHES</a>    
