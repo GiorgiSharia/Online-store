@@ -28,6 +28,7 @@
                 <th> Country</th>
                 <th> Phone</th> 
                 <th> Postal Code</th>
+                <th> Action </th>
             </tr>
         <?php foreach($allCustomers as $customers) { ?>
             <tr>
@@ -40,6 +41,7 @@
                 <td><?php echo $customers['country']?></td>
                 <td><?php echo $customers['telephone']?></td> 
                 <td><?php echo $customers['postal_code']?></td>
+                <td><a href='application/removeCustomer.php?customer_id=<?= $customers['id'] ?>' style="color:red"> REMOVE<a/></td>
             </tr>
         <?php } ?>
     </talbe>

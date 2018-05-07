@@ -19,26 +19,28 @@ session_start();
                     </li>
                     <li class="navButton"><a href="about.php">About</a></li>
                     <li>
-                        <div class="col-lg-6"  id="search">
-                            <div class="input-group well-align" >
-                                <div class="input-group-btn">
-                                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
-                                        <span id="title">Departments</span> 
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" id="drop">
-                                        <li><a href="#">Electronics</a></li>
-                                        <li><a href="#">Clothing</a></li>
-                                        <li><a href="#">House</a></li>
-                                        <li><a href="#">Footwear</a></li>
-                                    </ul>                               
+                        <form action="/Online-store/searchResults.php" method="POST">
+                            <div class="col-lg-6"  id="search">
+                                <div class="input-group well-align" >
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                                            <span id="title">Departments</span> 
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" id="drop">
+                                            <li><a href="#">Electronics</a></li>
+                                            <li><a href="#">Clothing</a></li>
+                                            <li><a href="#">House</a></li>
+                                            <li><a href="#">Footwear</a></li>
+                                        </ul>                               
+                                    </div>
+                                    <input type="text" class="form-control" name="query" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                                        <i class="glyphicon glyphicon-search"></i><input class="btn" type="submit" name="submit" value="Search">
+                                    </span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Search for...">
-                                <span class="input-group-btn">
-                                    <button class="btn" type="button"><i class="glyphicon glyphicon-search"></i> Search</button>
-                                </span>
                             </div>
-                        </div>
+                        </form>
                     </li>
                     <li class="navButton toRight"><a href="contact.php">Contact</a></li>
                     <?php if($_SESSION['isLoggedIn']){ ?>

@@ -10,7 +10,7 @@ class Search {
         $dbConn = new DatabaseConnection();
         $pdo = $dbConn->getConnection();   
 
-        $keyword = $_POST["q"];
+        $keyword = $_POST["query"];
 
         $statement = $pdo->prepare("SELECT * FROM `products` WHERE title LIKE '%".$keyword."%'");
         $statement->execute();
@@ -21,7 +21,7 @@ class Search {
         // no user matching the keyword
         if (empty($result)) {
             $_SESSION['error_message'] = 'Couldnt find products';
-            header('Location: /Online-store/Homepage.php');
+            header('Location: /Online-store/emptyResult.php');
             return [];
         }
         

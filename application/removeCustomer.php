@@ -1,19 +1,19 @@
 <?php
 require_once ("database/DatabaseConnection.php");
 include ('application/models/User.php');
-require_once ('application/models/Product.php');
 
-function removeProduct(){
-    $productID = $_GET["product_id"];
+
+function removeCustomer(){
+    $customerID = $_GET["customer_id"];
     $dbConn = new DatabaseConnection();
     $pdo = $dbConn->getConnection();
         try {
 
-            $statement = $pdo->prepare("DELETE FROM `products` WHERE id = :id");
-            $statement->bindParam(':id', $productID);
+            $statement = $pdo->prepare("DELETE FROM `users` WHERE id = :id");
+            $statement->bindParam(':id', $customerID);
             $statement->execute();
 
-            $_SESSION['success_message'] = 'Product was removed successfully';
+            $_SESSION['success_message'] = 'User was removed successfully';
             header('Location: /Online-store/homepage.php');
             return;
         } catch (PDOException $e) {
@@ -22,4 +22,4 @@ function removeProduct(){
         }
 }
 
-removeProduct();
+removeCustomer();

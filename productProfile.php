@@ -51,9 +51,9 @@
         <p>Price: <span id="price">€ <?php echo($productData['price']); ?></span></p>
         <p>Shipping Price: <span id="price">€ <?php echo($productData['shipping_price']); ?></span></p>
         <?php if($productData['in_stock'] > 0){ ?>
-            <p>In Stock</p>
+            <p style="color:green">In Stock</p>
         <?php }else{ ?>
-            <p>Out of Stock</p>
+            <p style="color:red">Out of Stock</p>
         <?php } ?>
         <p id="description"><?php echo($productData['description']); ?>
             <br/>

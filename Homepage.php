@@ -64,13 +64,13 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
                                             <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu" id="drop">
-                                            <li><a href="#">Electronics</a></li>
+                                            <li><a href="#">Phones</a></li>
                                             <li><a href="#">Clothing</a></li>
                                             <li><a href="#">House</a></li>
-                                            <li><a href="#">Footwear</a></li>
+                                            <li><a href="#">Footwear</a></li> 
                                         </ul>                               
                                     </div>
-                                    <input type="text" name="q" class="form-control" placeholder="Search for...">
+                                    <input type="text" name="query" class="form-control" placeholder="Search for...">
                                     <span class="input-group-btn">
                                     <i class="glyphicon glyphicon-search"></i><input class="btn" type="submit" name="submit" value="Search">
                                     </span>
