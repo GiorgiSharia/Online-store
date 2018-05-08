@@ -58,7 +58,7 @@
         <p id="description"><?php echo($productData['description']); ?>
             <br/>
         </p>
-        <a href="pay.php"><button id="buy" class="btn">Buy Now</button></a>
+        <a href="pay.php?product_id=<? echo($productData['id']); ?>"><button id="buy" class="btn">Buy Now</button></a>
         <br> <br> <br>
         <?php if($userData['is_admin']==1){ ?>
             <button class="btn buttn"><a href='editProduct.php?product_id=<?php echo($productData['id']);?>'>Edit Product</a></button>

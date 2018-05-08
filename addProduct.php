@@ -23,7 +23,7 @@ session_start();
             echo $_SESSION['error_message'];
         }
         ?>
-        <form action="/Online-store/application/add_product.php" method="POST" id="addProduct" enctype="multipart/form-data">
+        <form action="application/add_product.php" method="POST" id="addProduct" enctype="multipart/form-data">
             <label for="prodTitle">Title:</label>
             <input id="prodTitle" class="form-control" type="text" name="data[title]" required>
             <br/>

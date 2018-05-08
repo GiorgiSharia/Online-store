@@ -17,7 +17,6 @@ require_once ('application/models/User.php');
 <link rel="stylesheet" href="css/css1.css">
 <link rel="stylesheet" href="css/profile_style.css"
 </head>
-
 <div id="includeContent"></div>
     <div class="row">  
         <div class="col-lg-3">
@@ -47,7 +46,7 @@ require_once ('application/models/User.php');
                 <button class="btn buttn"><a href="customers.php">Manage Customers</a></button>
                 <br/>
             <?php }?>
-            <button class="btn buttn"><a href="">Order History</a></button>
+            <button class="btn buttn"><a href="orderHistory.php">Order History</a></button>
         </div>
         <div class="col-lg-3">
             <a href=""><img src="images/offer_2.jpg"></a>
