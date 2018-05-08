@@ -14,17 +14,19 @@
     <link rel="stylesheet" href="css/css1.css">
 </head>
 <div id="includeContent"></div>
-<!--<div id="sideMenu">
-    <ul class="nav nav-stacked">
-        <li class="sidebar"><a href="product.php">All</a></li>
-        <li class="sidebar"><a href='product.php?category=Phones'>Phones</a></li>
-        <li class="sidebar"><a href='product.php?category=Cameras'>Cameras</a></li>
-        <li class="sidebar"><a href="product.php?category=SmartWatches">Smart Watches</a></li>
-        <li class="sidebar"><a href="product.php?category=Accessories">Accessories</a></li>
-    </ul>
-</div>-->
+
 <div class="row">
-    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <div id="sideMenu">
+            <ul class="nav nav-stacked">
+                <li class="sidebar"><a href="product.php">All</a></li>
+                <li class="sidebar"><a href='product.php?category=Phones'>Phones</a></li>
+                <li class="sidebar"><a href='product.php?category=Cameras'>Cameras</a></li>
+                <li class="sidebar"><a href="product.php?category=SmartWatches">Smart Watches</a></li>
+                <li class="sidebar"><a href="product.php?category=Accessories">Accessories</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="col-lg-4">
         <?php foreach($allProducts as $products) { ?>
         <a href='productProfile.php?product_id=<?= $products['id'] ?>'>
