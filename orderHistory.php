@@ -16,8 +16,8 @@ include("application/orderHistories.php");
 </head>
 <div id="includeContent"></div>
 <div>
-        <?php if(empty($orders)) {?>
-        <!-- AK GAMOACHINET RAMENAIRAD RO ARGAK ORDER HISTORYTKO -->
+    <?php if(empty($allOrders)) {?>
+        <h2 style="padding-left: 50px">There are no orders placed from your account</h2>
     <?php } else {
             foreach($allOrders as $orders) { ?>
     <table border="1">

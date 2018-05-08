@@ -23,7 +23,6 @@ class Search {
         // no user matching the keyword
         if (empty($result)) {
             $_SESSION['error_message'] = 'Couldnt find products';
-            header('Location: /Online-store/emptyResult.php');
             return [];
         }
         

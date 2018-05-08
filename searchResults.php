@@ -17,14 +17,18 @@
 <div class="row">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
-        <?php foreach($matchProducts as $match) { ?>
+    <?php if(empty($matchProducts)) {?>
+        <h2 style="padding-left: 30px">No sucuh products were found</h2>
+    <?php }else{
+             foreach($matchProducts as $match) { ?>
         <a href='productProfile.php?product_id=<?= $match['id'] ?>'>
             <p id="title_text"><b><?= $match['title'] ?><b></p>
             <img src="uploads\<?= $match['product_picture'] ?>" style="width: 300px; height: 300px;">
             <p id="price_text">Price: <b>€ <?= $match['price'] ?><b></p>
             <hr>
         </a>
-        <?php } ?></div>
+        <?php } 
+        }?></div>
     <div class="col-lg-4"></div>
 </div>
 
