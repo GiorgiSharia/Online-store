@@ -17,12 +17,13 @@ include("application/orderHistoriesA.php");
 <div id="includeContent"></div>
 <div>
     <?php if(empty($allOrders)) {?>
-        <h2 style="padding-left: 50px">There are no orders placed from your account</h2>
+        <h2 style="padding-left: 50px">There are no orders placed on this website</h2>
     <?php } else {
     foreach($allOrders as $orders) { ?>
     <table border="1">
         <tr>
             <th> ID</th>
+            <th> User ID</th>
             <th> Product ID</th>
             <th> Card Number</th>
             <th> Card Holder</th>
@@ -32,6 +33,7 @@ include("application/orderHistoriesA.php");
         </tr>
         <tr>
             <td><?php echo $orders['id']?></td>
+            <td><?php echo $orders['userID']?></td>
             <td><?php echo $orders['productID']?></td>
             <td><?php echo $orders['cardNumber']?></td>
             <td><?php echo $orders['cardHolder']?></td>

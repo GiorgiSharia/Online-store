@@ -7,7 +7,6 @@ class allOrders {
 
     public function getOrders()
     {
-        $userID = $_SESSION['userID'];
         // create PDO connection object
         $dbConn = new DatabaseConnection();
         $pdo = $dbConn->getConnection();
