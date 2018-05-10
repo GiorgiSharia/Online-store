@@ -1,6 +1,6 @@
 <?php
+session_start();
 require_once ("database/DatabaseConnection.php");
-
 include 'validator.php';
 
 function updateProduct() {
@@ -9,7 +9,6 @@ function updateProduct() {
     //inputs validated
     $title = $postedData['title'];
     $price = $postedData['price'];
-    $prodPic = $postedData['photo'];
     $price = trimSpecialChars($price);
     $shipping_price = $postedData['shipping_price'];
     $shipping_price = trimSpecialChars($shipping_price);
