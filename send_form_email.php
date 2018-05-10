@@ -3,7 +3,7 @@ include 'application/validator.php';
 if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "george.qutateladze@gmail.com";
+    $email_to = "support@eshop.com";
     $email_subject = "eShop Contact Form";
 
 
@@ -74,7 +74,6 @@ if(isset($_POST['email'])) {
     $email_message .= "First Name: ".clean_string($first_name)."\n";
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
-//    $email_message .= "Country: ".clean_string($country)."\n";
     $email_message .= "Subject: ".clean_string($comments)."\n";
 
 // create email headers
