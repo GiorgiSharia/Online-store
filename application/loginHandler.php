@@ -4,6 +4,7 @@ require_once ("database/DatabaseConnection.php");
 unset($_SESSION['success_message']);
 unset($_SESSION['error_message']);
 include 'validator.php';
+
 function login() {
     $postedData = $_POST['data'];
     
@@ -12,9 +13,11 @@ function login() {
     $email = trimSpecialChars($email);
     $password = $postedData['password'];
     $password = trimSpecialChars($password);
+
     // create PDO connection object
     $dbConn = new DatabaseConnection();
     $pdo = $dbConn->getConnection();
+    
     // retrieve user with the email
     try {
         $statement = $pdo->prepare("SELECT * FROM `users` WHERE email = :email LIMIT 1");

@@ -29,16 +29,14 @@ function register() {
     $telephone = $postedData['telephone'];
     $telephone = trimSpecialChars($telephone);
 
-    
-
     // create PDO connection object
     $dbConn = new DatabaseConnection();
     $pdo = $dbConn->getConnection();
-    // insert using PDO prepared statement, it helps prevents against sql injection attack (more on that later)
+
     $params = [
         ':firstname' => $firstname,
         ':lastname' => $lastname,
-        ':password' => password_hash($password, PASSWORD_DEFAULT), // we MUST not store password as plain text
+        ':password' => password_hash($password, PASSWORD_DEFAULT),
         ':email' => $email,
         ':address' => $address,
         ':city' => $city,
@@ -56,10 +54,8 @@ function register() {
 
         // no user matching the email
         if (!empty($result)) {
-           // $_SESSION['error_message'] = 'Invalid email / password!';
-            //header('Location: /Online-store/userForm.php');
-            $answer =  'email exists';
-            echo('email exists');
+            $answer =  'This E-mail has already been used';
+            echo($answer);
         }else{
             try {
                 $statement = $pdo->prepare(
@@ -74,7 +70,6 @@ function register() {
                 }
         
             } catch (PDOException $e) {
-                // usually this error is logged in application log and we should return an error message that's meaninful to user 
                 return $e->getMessage();
                 echo "Registration was not successful";
             }

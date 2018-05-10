@@ -1,10 +1,9 @@
 <?php
-require_once ("database/DatabaseConnection.php");
-include ('application/models/User.php');
-require_once ('application/models/Product.php');
+require_once ("application\database\DatabaseConnection.php");
+
 
 function removeProduct(){
-    $productID = $_GET["product_id"];
+    $productID = $_GET["remove_id"];
     $dbConn = new DatabaseConnection();
     $pdo = $dbConn->getConnection();
         try {

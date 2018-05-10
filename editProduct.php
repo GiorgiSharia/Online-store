@@ -62,7 +62,7 @@ require_once ('application/models/Product.php');
             </div>
             <input id="reg" class="buttn" type="submit" value="Submit Changes" name="data[submit]">
             <br> <br>
-            <button class="buttn" ><a href='removeProduct.php?product_id=<?php echo($productData['id']);?>'><font color="grey"><i class="fa fa-trash"></i> Remove Product</a></font></button>
+            <button class="buttn" ><a href='removeProduct.php?remove_id=<?= $productData['id'];?>'><font color="grey"><i class="fa fa-trash"></i> Remove Product</a></font></button>
             <br/>
         </form>
     </div>

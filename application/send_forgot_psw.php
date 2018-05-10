@@ -10,7 +10,6 @@ if(isset($_POST['logMail'])) {
 
     function died($error)
     {
-        // your error code can go here
         echo "We are very sorry, but you have to input correct email. ";
         echo "If there was anything else you will see errors below.<br /><br />";
         echo $error . "<br /><br />";
@@ -18,13 +17,12 @@ if(isset($_POST['logMail'])) {
         die();
     }
 
-    // validation expected data exists
     if (!isset($_POST['logMail'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
 
-    $email = $_POST['logMail']; // required
+    $email = $_POST['logMail']; 
     $email = trimSpecialChars($email);
 
     $error_message = "";
@@ -37,7 +35,7 @@ if(isset($_POST['logMail'])) {
     function randomPassword()
     {
         $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-        $pass = array(); //remember to declare $pass as an array
+        $pass = array(); //$pass needs to be declared as an array
         $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
         for ($i = 0; $i < 8; $i++) {
             $n = rand(0, $alphaLength);
@@ -45,7 +43,6 @@ if(isset($_POST['logMail'])) {
         }
         return implode($pass); //turn the array into a string
     }
-
 
     function sendPSW()
     {

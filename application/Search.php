@@ -15,7 +15,8 @@ class Search {
         $keyword= trimSpecialChars($keyword);
         $keyword = str_replace("'","",$keyword);
         if(strlen($keyword) < 3){
-            $_SESSION['error_message'] = 'Size should be bigger';
+            echo (strlen($keyword));
+            $_SESSION['error_message'] = 'Please search for at least 3 characters';
             return [];
         }
 
@@ -25,7 +26,7 @@ class Search {
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         
 
-        // no user matching the keyword
+        // no product matching the keyword
         if (empty($result)) {
             $_SESSION['error_message'] = 'Couldnt find products';
             return [];

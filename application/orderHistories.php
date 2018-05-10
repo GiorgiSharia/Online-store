@@ -21,8 +21,6 @@ class allOrders {
         // no order matching user ID
         if (empty($result)) {
             $_SESSION['error_message'] = 'Couldnt find orders';
-           // header("Location: /Online-store/orderHistory.php");
-            //echo "<h2>You have not placed any orders</h2>";
             return [];
         }
 

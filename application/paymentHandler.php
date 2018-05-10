@@ -3,9 +3,8 @@ session_start();
 include 'validator.php';
 require_once ("database/DatabaseConnection.php");
     /**
-     * This is the function that handles the registration
+     * This is the function that handles payment validation
      */
-
 
 function pay() {
     $postedData = $_POST['data'];
@@ -27,13 +26,13 @@ function pay() {
     // create PDO connection object
     $dbConn = new DatabaseConnection();
     $pdo = $dbConn->getConnection();
-    // insert using PDO prepared statement, it helps prevents against sql injection attack (more on that later)
+
     $params = [
         ':cardHolder' => $cardHolder,
         ':userID' => $userID,
         ':productID' => $productID,
         ':cardNumber' => $cardNumber,
-        ':expireMonth' => $month, // we MUST not store password as plain text
+        ':expireMonth' => $month, 
         ':expireYear' => $year,
         ':ccv' => $ccv,
     ];
@@ -45,7 +44,7 @@ function pay() {
 
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        // no user matching the id
+        // no product matching the id
         if (empty($result)) {
             $_SESSION['error_message'] = 'Couldnt find product';
             header('Location: /Online-store/Homepage.php');
@@ -60,6 +59,7 @@ function pay() {
                           VALUES (:userID, :productID, :cardHolder, :cardNumber, :expireMonth, :expireYear, :ccv)"
             );
             $statement->execute($params);
+            //if product was purchased, one less is left in stock
             $newInStock = $productData['in_stock'] - 1;
             $stmnt = $pdo->prepare("UPDATE `products` SET in_stock = :in_stock WHERE id = :id");
             $stmnt->bindParam(':id', $productID);
