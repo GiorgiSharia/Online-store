@@ -41,11 +41,10 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
 <div>
     <?php if(empty($allOrders)) {?>
         <h2 style="padding-left: 50px">There are no orders placed on this website</h2>
-    <?php } else {
-    foreach($allOrders as $orders) { ?>
+    <?php } else { ?>
     <table border="1">
         <tr>
-            <th> ID</th>
+            <th> Order ID</th>
             <th> User ID</th>
             <th> Product ID</th>
             <th> Card Number</th>
@@ -54,6 +53,7 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
             <th> Year</th>
             <th> CCV</th>
         </tr>
+    <?php foreach($allOrders as $orders) { ?>
         <tr>
             <td><?php echo $orders['id']?></td>
             <td><?php echo $orders['userID']?></td>

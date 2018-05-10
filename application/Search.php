@@ -15,7 +15,6 @@ class Search {
         $keyword= trimSpecialChars($keyword);
         $keyword = str_replace("'","",$keyword);
         if(strlen($keyword) < 3){
-            echo (strlen($keyword));
             $_SESSION['error_message'] = 'Please search for at least 3 characters';
             return [];
         }
