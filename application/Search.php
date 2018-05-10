@@ -13,6 +13,7 @@ class Search {
 
         $keyword = $_POST["query"];
         $keyword= trimSpecialChars($keyword);
+        $keyword = str_replace("'","",$keyword);
         if(strlen($keyword) < 3){
             echo (strlen($keyword));
             $_SESSION['error_message'] = 'Size should be bigger';

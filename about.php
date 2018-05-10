@@ -33,7 +33,7 @@
   <ul class="unordered row">
     <li class="col-lg-3">
         <b>Giorgi Sharia</b>
-        <p>Git Expert</p>
+        <p>Full Stack Developer</p>
         <br/>
         <img  src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/733845_688012414556741_1073234379_n.jpg?_nc_cat=0&oh=70603350a41c1cd60d4adf1d8135d914&oe=5B903BF0" alt="pic"id ="collegue">
     </li>
