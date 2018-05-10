@@ -1,9 +1,8 @@
 <?php
 require_once ("application\database\DatabaseConnection.php");
 
-
 function removeProduct(){
-    $productID = $_GET["remove_id"];
+    $productID = $_GET["product_id"];
     $dbConn = new DatabaseConnection();
     $pdo = $dbConn->getConnection();
         try {

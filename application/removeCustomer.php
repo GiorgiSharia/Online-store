@@ -2,7 +2,6 @@
 require_once ("database/DatabaseConnection.php");
 include ('application/models/User.php');
 
-
 function removeCustomer(){
     $customerID = $_GET["customer_id"];
     $dbConn = new DatabaseConnection();
