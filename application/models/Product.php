@@ -10,7 +10,7 @@ class Product {
         $dbConn = new DatabaseConnection();
         $pdo = $dbConn->getConnection();
 
-        // get product id from session variable
+        // get product id from URL
         $productID = $_GET["product_id"];
 
         $statement = $pdo->prepare("SELECT id, title, category, seller, description, price, shipping_price, product_picture, in_stock FROM `products` WHERE id = :id LIMIT 1");

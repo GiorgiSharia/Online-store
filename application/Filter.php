@@ -11,6 +11,7 @@ class Filter {
         $pdo = $dbConn->getConnection();
 
         $productCategory=$_GET["category"];
+
         if($productCategory == "Phones" || $productCategory == "Cameras" || $productCategory == "SmartWatches" || $productCategory == "Accessories"){
             $statement = $pdo->prepare("SELECT * FROM `products` WHERE category=:category");
             $statement->bindParam(':category', $productCategory);
@@ -23,7 +24,7 @@ class Filter {
         }
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        // no user matching the id
+        // no product matching category
         if (empty($result)) {
             $_SESSION['error_message'] = 'Couldnt find products';
             header('Location: /Online-store/Homepage.php');

@@ -15,7 +15,7 @@ class AllCustomers {
 
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        // no user matching the id
+        // no users found
         if (empty($result)) {
             $_SESSION['error_message'] = 'Couldnt find products';
             header('Location: /Online-store/Homepage.php');

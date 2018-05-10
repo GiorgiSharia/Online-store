@@ -3,9 +3,9 @@ session_start();
 require_once ("database/DatabaseConnection.php");
 
 /**
- * This is the function that handles the registration
+ * This is the function that handles product addition
  */
-function AddProduct() {
+function addProduct() {
     $postedData = $_POST['data'];
     $title = $postedData['title'];
     $seller = $postedData['seller'];
@@ -51,13 +51,7 @@ function AddProduct() {
         die();
     }
 }
-/**
- * @return string
- */
 
-/**
- * @return string
- */
 function uploadImage()
 {
     // no file selected

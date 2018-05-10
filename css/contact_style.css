@@ -17,7 +17,7 @@ input[type=text], select, textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+#sendForm {
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;

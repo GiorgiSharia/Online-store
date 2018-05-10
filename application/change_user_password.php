@@ -1,12 +1,9 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 session_start();
 
 require_once ("database/DatabaseConnection.php");
-
 include 'validator.php';
+
 function changePSW()
 {
     //inputs validated
@@ -30,7 +27,7 @@ function changePSW()
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     $userData = $result[0];
 
-    // no user matching the email
+    // no user matching found
     if (empty($result)) {
         $_SESSION['error_message'] = 'Invalid email / password!';
         header('Location: /Online-store/profile.php');
@@ -61,19 +58,12 @@ function changePSW()
     $dbConn = new DatabaseConnection();
     $pdo = $dbConn->getConnection();
 
-    /*$stmt = $pdo->prepare("SELECT password FROM `users` WHERE id = :id LIMIT 1");
-    $stmt->bindParam(':id', $id);
-    $stmt->execute();
-    $res = $stmt->get_result();
-    echo($res);*/
-
     try {
         $statement = $pdo->prepare("SELECT * FROM `users` WHERE id = :id LIMIT 1");
         $statement->bindParam(':id', $id);
         $statement->execute();
 
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 
         // no user matching the email
         if (empty($result)) {
@@ -99,7 +89,7 @@ function changePSW()
         }
 
     } catch (PDOException $e) {
-        // usually this error is logged in application log and we should return an error message that's meaninful to user
+        // usually this error is logged in application log and we should return an error message that's meaningful to user
         var_dump($e->getMessage());
         return $e->getMessage();
     }
