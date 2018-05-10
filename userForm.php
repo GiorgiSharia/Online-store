@@ -23,6 +23,9 @@
                 if (isset($_SESSION['error_message'])) {
                     echo $_SESSION['error_message'];
                 }
+                if (isset($_SESSION['success_message'])) {
+                    echo $_SESSION['success_message'];
+                }
             ?>
             <form action="/Online-store/application/loginHandler.php" method="POST">
                 <label for="logMail">Email Address:</label>

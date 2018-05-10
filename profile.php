@@ -45,6 +45,8 @@ require_once ('application/models/User.php');
                 <br>
                 <button class="btn buttn"><a href="customers.php">Manage Customers</a></button>
                 <br/>
+                <button class="btn buttn"><a href="allSales.php">All Sales</a></button>
+                <br/>
             <?php }?>
             <button class="btn buttn"><a href="orderHistory.php">Order History</a></button>
         </div>
