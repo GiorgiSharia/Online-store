@@ -22,7 +22,7 @@
 <form action="application/paymentHandler.php?product_id=<? echo($productID); ?>" method="POST" id="payment">
 <div  id="content">
     <h2>Pay by card </h2>
-    <img src="https://www.horusrc.com/media/wysiwyg/pay_by_cards.jpg" alt="cards" style="width:150px; height:25px;">
+    <img src="uploads/cards.jpg" alt="cards" style="width:150px; height:25px;">
     <br/>
     <br/>
     <b> Card Holder </b><span style="margin-left: 20px;"><input type="text" id="card_holder" name="data[cardHolder]" required></span>
