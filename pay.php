@@ -19,11 +19,6 @@
 </head>
 
 <div id="includeContent"></div>
-<?php
-if (isset($_SESSION['error_message'])) {
-    echo $_SESSION['error_message'];
-}
-?>
 <form action="application/paymentHandler.php?product_id=<? echo($productID); ?>" method="POST" id="payment">
 <div  id="content">
     <h2>Pay by card </h2>
