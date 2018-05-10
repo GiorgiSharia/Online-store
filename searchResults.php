@@ -5,8 +5,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-        
+<head>  
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- fa fa symobls -->
@@ -18,7 +17,7 @@
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
     <?php if(empty($matchProducts)) {?>
-        <h2 style="padding-left: 30px">No sucuh products were found</h2>
+        <h2 style="padding-left: 30px"><?php echo $_SESSION['error_message'] ?></h2>
     <?php }else{
              foreach($matchProducts as $match) { ?>
         <a href='productProfile.php?product_id=<?= $match['id'] ?>'>

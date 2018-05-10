@@ -13,6 +13,11 @@ class Search {
 
         $keyword = $_POST["query"];
         $keyword= trimSpecialChars($keyword);
+        if(strlen($keyword) < 3){
+            echo (strlen($keyword));
+            $_SESSION['error_message'] = 'Size should be bigger';
+            return [];
+        }
 
         $statement = $pdo->prepare("SELECT * FROM `products` WHERE title LIKE '%".$keyword."%'");
         $statement->execute();
