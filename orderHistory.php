@@ -18,18 +18,18 @@ include("application/orderHistories.php");
 <div>
     <?php if(empty($allOrders)) {?>
         <h2 style="padding-left: 50px">There are no orders placed from your account</h2>
-    <?php } else {
-            foreach($allOrders as $orders) { ?>
-    <table border="1">
-        <tr>
-            <th> ID</th>
-            <th> Product ID</th>
-            <th> Card Number</th>
-            <th> Card Holder</th>
-            <th> Month</th>
-            <th> Year</th>
-            <th> CCV</th>
-        </tr>
+    <?php } else { ?>
+        <table border="1">
+            <tr>
+                <th> ID</th>
+                <th> Product ID</th>
+                <th> Card Number</th>
+                <th> Card Holder</th>
+                <th> Month</th>
+                <th> Year</th>
+                <th> CCV</th>
+            </tr>
+            <?php foreach($allOrders as $orders) { ?>
                 <tr>
                     <td><?php echo $orders['id']?></td>
                     <td><?php echo $orders['productID']?></td>

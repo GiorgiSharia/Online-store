@@ -56,25 +56,6 @@
         <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.15752-9/31906790_1102285059911929_3088710376410316800_n.jpg?_nc_cat=0&oh=4a3ef62294fffacfa80a305ea3250beb&oe=5B54046A" alt="pic"id ="collegue">
     </li>
   </ul>
-  <!--
-<div style="margin-left:30px">
-<h3 style="margin-left:550px; color: #061050;">The Team </h3>
-<div>
-<img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/733845_688012414556741_1073234379_n.jpg?_nc_cat=0&oh=70603350a41c1cd60d4adf1d8135d914&oe=5B903BF0" alt="pic"id ="collegue">
-
-<span><img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.15752-9/31530939_1908529332505153_1364403374979547136_n.jpg?_nc_cat=0&oh=366e52f25ba9b301814b30bc6e8e7400&oe=5B5031A0" alt="pic"id ="collegue">
-</span>
-<span>
-<img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/10584003_837217366303632_2177816116487833929_n.jpg?_nc_cat=0&oh=4c8ee816051b6a23ffdddf38ab0d6292&oe=5B9C5D3C" alt="pic"id ="collegue">    
-</span>
-<span>
-<img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.15752-9/31906790_1102285059911929_3088710376410316800_n.jpg?_nc_cat=0&oh=4a3ef62294fffacfa80a305ea3250beb&oe=5B54046A" alt="pic"id ="collegue">
-</span>
-<b>Giorgi Sharia</b>
-<br/>
-<h9>Git Expert</h9>
-
-<b>Giorgi Kutateladze</b>-->
 </div>
 </body>
 </html>

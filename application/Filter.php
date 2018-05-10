@@ -18,9 +18,9 @@ class Filter {
             $statement->execute();
         }
 
-        else{
-        $statement = $pdo->prepare("SELECT * FROM `products`");
-        $statement->execute();
+        else if($productCategory == "All"){
+            $statement = $pdo->prepare("SELECT * FROM `products`");
+            $statement->execute();
         }
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 

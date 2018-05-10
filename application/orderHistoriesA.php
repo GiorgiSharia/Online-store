@@ -2,6 +2,7 @@
 require_once ('application/database/DatabaseConnection.php');
 require_once ("application/models/User.php");
 
+//this class is to display all placed orders for admin 
 
 class allOrders {
 

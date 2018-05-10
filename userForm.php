@@ -82,10 +82,10 @@
             </form>
         </div>
         <div class="col-lg-2" id="ad">
-            <div>SHOP NOW:</div>
+            <div id="lab">SHOP NOW:</div>
             <br/>
-            <a href="productProfile.php" id="item-1"><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
-            <a href='productProfile.php?product_id=99'><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
+            <a href="productProfile.php?product_id=99" id="item-1"><img src="images/item-1.jpg" class="ad" alt:"Green-Polariod"></a>
+            <a href='productProfile.php?product_id=113'><img src="images/item-2.jpg" class="ad" alt:"smart-Watch"></a>
             <a href='productProfile.php?product_id=96'><img src="images/item-3.jpg" class="ad" alt:"GoPro-on-legs"></a>
             <a href='productProfile.php?product_id=100'><img src="images/item-4.jpg" class="ad" alt:"GoPro"></a>
         </div>
