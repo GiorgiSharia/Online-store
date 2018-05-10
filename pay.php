@@ -40,10 +40,6 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
     <script src="js/script.js"></script>
 <link rel="stylesheet" href="css/css1.css">
 <title>eShop</title>
-<<<<<<< HEAD
-
-=======
->>>>>>> f82d224d78e97a2a408d7be40a89f43e3b9d177d
 </head>
 
 <div id="includeContent"></div>
