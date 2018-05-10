@@ -74,7 +74,7 @@
                     <input id="regPass"type="password" placeholder="Password" class="form-control" name="data[password]" required> 
                     <br/>
                     <label for="regPassRepeat">Repeat Password:</label>
-                    <input id="regPassRepeat"type="password" placeholder="Repeat Password" class="form-control" required> 
+                    <input id="regPassRepeat"type="password" placeholder="Repeat Password" class="form-control" name="data[confirm_password]" required> 
                     <br/>
                 </div>
                 <input id="reg" class="buttn" type="submit" value="REGISTER" name="data[submit]">

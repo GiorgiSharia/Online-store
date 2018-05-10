@@ -51,7 +51,15 @@ function register() {
 
         $result = $emCheck->fetchAll(PDO::FETCH_ASSOC);
         $userData = $result[0];
-
+        //gvegadaveba
+        if($password != $confirmPassword){
+            echo "Passwords do not match";
+            return;
+        }
+        if(strlen($password) < 8){
+            echo "Password should be at least 8 chars";
+            return;
+        }
         // no user matching the email
         if (!empty($result)) {
             $answer =  'This E-mail has already been used';

@@ -35,6 +35,11 @@ function changePSW()
     }
 
     $userEncryptedPassword = $userData['password'];
+    if(strlen($newPassword) < 8){
+        $_SESSION['error_message'] = 'Password should be at least 8 chars';
+        header('Location: /Online-store/changePSW.php');
+        die();
+    }
 
     // verify the incoming password with encrypted password
     if (password_verify($password, $userEncryptedPassword)) {

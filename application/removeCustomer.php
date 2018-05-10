@@ -13,7 +13,7 @@ function removeCustomer(){
             $statement->execute();
 
             $_SESSION['success_message'] = 'User was removed successfully';
-            header('Location: /Online-store/homepage.php');
+            header('Location: /Online-store/customers.php');
             return;
         } catch (PDOException $e) {
             var_dump($e->getMessage());
