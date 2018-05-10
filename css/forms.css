@@ -36,3 +36,8 @@ hr{
     width:172px;
     height:129px
 }
+#lab{
+    font-size: 20px;
+    font-weight: bold;
+    right: 10%;
+}

@@ -38,7 +38,6 @@ AAD/4AAA//AAAA==" rel="icon" type="image/x-icon" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/css1.css">
 <title>eShop</title>
-<script src="js/script.js"></script>
 </head>
 
 <div id="includeContent"></div>

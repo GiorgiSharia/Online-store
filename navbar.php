@@ -10,7 +10,7 @@ session_start();
                     <li class="navButton"><a href="homepage.php">Home</a></li>
                     <li class="navButton dropdown" ><a class="dropdown-toggle" href="product.php" data-toggle="dropdown">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="product.php">All</a></li>
+                            <li><a href="product.php?category=All">All</a></li>
                             <li><a href='product.php?category=Phones'>Phones</a></li>
                             <li><a href='product.php?category=Cameras'>Cameras</a></li>
                             <li><a href="product.php?category=SmartWatches">Smart Watches</a></li>
