@@ -65,7 +65,7 @@ function pay() {
             $stmnt->bindParam(':id', $productID);
             $stmnt->bindParam(':in_stock', $newInStock);
             $stmnt->execute();
-            header('Location: /Online-store/profile.php');
+            header('Location: /Online-store/orderHistory.php');
         } else {
             $_SESSION['error_message'] = 'Product is out of stock';
             echo nl2br("\nProduct is out of stock!");

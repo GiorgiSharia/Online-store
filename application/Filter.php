@@ -10,7 +10,7 @@ class Filter {
         $dbConn = new DatabaseConnection();
         $pdo = $dbConn->getConnection();
 
-        $productCategory=$_GET["category"];
+        $productCategory = $_GET["category"];
 
         if($productCategory == "Phones" || $productCategory == "Cameras" || $productCategory == "SmartWatches" || $productCategory == "Accessories"){
             $statement = $pdo->prepare("SELECT * FROM `products` WHERE category=:category");
@@ -18,9 +18,9 @@ class Filter {
             $statement->execute();
         }
 
-        else{
-        $statement = $pdo->prepare("SELECT * FROM `products`");
-        $statement->execute();
+        else if($productCategory == "All"){
+            $statement = $pdo->prepare("SELECT * FROM `products`");
+            $statement->execute();
         }
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
