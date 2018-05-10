@@ -19,7 +19,8 @@ function pay() {
 
 
     if(checkCardNumber($cardNumber) == false || checkCardCVV($ccv) == false){
-        echo("Your card number/ccv is not correct");
+        echo nl2br("Your card number/ccv is not correct");
+        echo nl2br("\n<a href='../Homepage.php'>Return to homepage</a>");
         die();
     }
 

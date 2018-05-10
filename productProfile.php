@@ -58,7 +58,11 @@
         <p id="description"><?php echo($productData['description']); ?>
             <br/>
         </p>
-        <a href="pay.php?product_id=<? echo($productData['id']); ?>"><button id="buy" class="btn">Buy Now</button></a>
+        <?php if($productData['in_stock'] >= 1){ ?>
+            <a href="pay.php?product_id=<? echo($productData['id']); ?>"><button id="buy" class="btn">Buy Now</button></a>
+        <?php } else { ?>
+            <h3>This item is currently unavailable</h3>
+        <?php }?>
         <br> <br> <br>
         <?php if($userData['is_admin']==1){ ?>
             <button class="btn buttn"><a href='editProduct.php?product_id=<?php echo($productData['id']);?>'>Edit Product</a></button>
